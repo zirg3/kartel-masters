@@ -1,0 +1,27 @@
+.schedule {
+  display: none;
+
+  @media (min-width: $min-desktop) {
+    display: flex;
+    flex-wrap: wrap;
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+}
+
+.schedule__time {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.schedule__time--clock::before {
+  width: 23px;
+  height: 23px;
+  margin-right: 8px;
+  background-image: url("../img/icon_clock.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  content: "";
+}

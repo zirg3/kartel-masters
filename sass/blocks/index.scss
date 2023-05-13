@@ -1,0 +1,21 @@
+// Для главной страницы только
+.index {}
+
+// Фоновое изображение для первой секции
+.index__wrapper {
+  min-height: 768px;
+  background-image: url("../img/bg/hero/fullscreen-mobile.webp");
+  // background-image: linear-gradient(to right, rgba(231, 227, 227, 0.7), rgba(163, 151, 151, 0.81));
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: calc(50% + 0px);
+  background-position-y: -41px;
+
+
+  @media (min-width:$min-tablet) {
+    background-image: url("../img/bg/hero/fullscreen-desktop.webp");
+    background-size: 1962px;
+    background-position-y: -60px;
+  }
+
+}

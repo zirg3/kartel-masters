@@ -1,0 +1,63 @@
+//
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__input {
+  width: 100%;
+  @include font_small;
+  padding: 16px 12px;
+  margin-bottom: 20px;
+  color: var(--font-color-basic);
+  border: 1px solid var(--form-input-border);
+  border-radius: 4px;
+}
+
+.form__submit {
+  width: 100%;
+  @include font_secondary($font-bold);
+  @include font_small;
+  padding: 18px 0;
+}
+
+.form__text {
+  font-size: var(--form-text-size);
+  line-height: var(--form-line-height);
+  text-indent: 2rem;
+  margin-bottom: 14px;
+}
+
+.form__label {
+  display: flex;
+  flex-direction: column;
+  @include font_primary($font-bold);
+  @include font_small;
+  color: var(--main-color-secondary-);
+}
+
+.success {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	padding: 32px;
+	@include font_secondary($font-bold);
+	font-size: xx-large;
+  color: $success-color;
+  background-color: var(--bg-color-basic);
+  outline: 1px solid $success-color;
+  transform: translate(-50%, -50%);
+}
+
+.error {
+  margin-top: 10px;
+  padding: 5px;
+  color: $error-color;
+  background-color: var(--bg-color-basic);
+  outline: 1px solid $error-color;
+}

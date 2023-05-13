@@ -1,0 +1,205 @@
+// Раздел преимуществ на синем фоне
+.advantages {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 0 55px 0;
+  @include font_primary($font-regular);
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--font-color-inv);
+  background-color: var(--bg-color-secondary);
+
+  &:focus-within {
+    padding-bottom: 0;
+  }
+
+  @media (min-width: $min-desktop) {
+    position: relative;
+    padding: 0;
+    margin-top: 221px;
+    margin-bottom: 146px;
+
+    &::before,
+    &::after {
+      position: absolute;
+      width: 100%;
+      height: 120px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      content: "";
+    }
+
+    &::before {
+      top: -119px;
+      background-image: url("../img/bg/advantages/blue_top.svg");
+      background-position: top;
+    }
+
+    &::after {
+      bottom: -80px;
+      background-image: url("../img/bg/advantages/blue_bottom.svg");
+      background-position: bottom;
+      z-index: -1;
+    }
+
+  }
+}
+
+.advantages__list {
+  margin-bottom: 53px;
+
+  @media (min-width: $min-desktop) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: start;
+    row-gap: 40px;
+  }
+
+  &>.list__item {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding-left: 90px;
+
+    @media (min-width: $min-desktop) {
+      width: calc(100% - 85px);
+      padding-left: 110px;
+      justify-self: center;
+    }
+  }
+
+  &>.list__item:not(:last-of-type) {
+    margin-bottom: 40px;
+
+    @media (min-width: $min-desktop) {
+      margin-bottom: 0;
+    }
+  }
+
+  &>.list__item::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90px;
+    height: 75px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    content: "";
+  }
+}
+
+// Заголовок раздела
+.advantages__title {
+  margin-bottom: 50px;
+
+  @media (min-width: $min-desktop) {
+    margin-top: 8px;
+    margin-bottom: 70px;
+  }
+}
+
+// Заголовок преимущества
+.advantages__name {
+  margin: 0;
+  margin-bottom: 7px;
+  padding-left: 10px;
+  @include font_secondary($font-bold);
+  font-size: 16px;
+  line-height: 22px;
+  text-transform: uppercase;
+
+  @media (min-width: $min-desktop) {
+    margin-bottom: 7px;
+    padding-left: 0;
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
+
+// Описание преимущества
+.advantages__description {
+  padding-left: 10px;
+  text-indent: 0;
+
+  @media (min-width: $min-desktop) {
+    padding-left: 0;
+  }
+}
+
+.advantages__quality {
+  &::before {
+    background-image: url("../img/advantages/quality.webp");
+  }
+}
+
+.advantages__payment {
+  &::before {
+    background-image: url("../img/advantages/payment.webp");
+  }
+}
+
+.advantages__deadlines {
+  &::before {
+    background-image: url("../img/advantages/deadlines.webp");
+  }
+}
+
+.advantages__complex {
+  &::before {
+    background-image: url("../img/advantages/complex.webp");
+  }
+}
+
+.advantages__price {
+  &::before {
+    background-image: url("../img/advantages/price.webp");
+  }
+}
+
+.advantages__materials {
+  &::before {
+    background-image: url("../img/advantages/materials.webp");
+  }
+}
+
+.advantages__profile {
+  display: flex;
+  flex-direction: column;
+
+  & .button {
+    margin: 0 auto;
+    padding: 12px 40px;
+    @include font_secondary($font-bold);
+    font-size: 14px;
+    line-height: 14px;
+    box-shadow: 0px 5px 15px rgba(255, 184, 32, 0.15);
+  }
+
+  & .accordion__item {
+    position: relative;
+    top: -40px;
+    height: fit-content;
+    padding-top: 55px;
+  }
+
+  & p {
+    max-width: 1267px;
+    @include font_primary($font-regular);
+    font-size: 12px;
+    line-height: 18px;
+    text-indent: 2rem;
+
+    @media (min-width: $min-desktop) {
+      margin: 0 auto;
+      margin-bottom: 14px;
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+
+  & p:not(:last-of-type) {
+    margin-bottom: 12px;
+  }
+}

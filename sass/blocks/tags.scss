@@ -1,0 +1,53 @@
+// Облако меток
+.tags {
+  width: 100%;
+
+  &:hover .tags__list {
+    width: 370px;
+    font-size: 16px;
+    transform: scale(1.2), rotate3d(360deg);
+  }
+}
+
+// Контейнер меток
+.tags__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 270px;
+  margin: 0 auto;
+  font-size: 12px;
+  padding: 10px;
+
+  @media (min-width: $min-desktop) {
+    font-size: 6px;
+    transition: font-size 1.6s ease-in-out,
+      width 1.6s ease-in-out,
+      scale 1.6s ease-in-out,
+      rotate 1.6s ease-out;
+  }
+}
+
+// Ссылка метки
+.tags__link {
+  display: block;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  text-decoration: none;
+  color: #00659e;
+  background-color: #ffffff;
+  border: 1px solid #00659e;
+  border-radius: 20px;
+
+  &:hover {
+    color: #007cc1;
+    text-decoration: underline;
+  }
+
+  &:active {
+    opacity: 0.5;
+    box-shadow: none;
+  }
+}

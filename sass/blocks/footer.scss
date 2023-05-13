@@ -1,0 +1,224 @@
+// Нижний колонтитул секции / раздела / документа (базовый)
+
+.footer {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $min-desktop) {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0 10px;
+  }
+
+  @media (min-width: 1550px) {
+    padding: 0;
+  }
+}
+
+// Логический раздел - секция
+.footer__section {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__links {
+  align-items: center;
+  max-width: 300px;
+
+  @media (min-width: $min-desktop) {
+    display: grid;
+    grid-template-columns: 1fr 200px 180px 180px 1fr;
+    grid-template-rows: auto min-content;
+    column-gap: 20px;
+    width: 100%;
+    max-width: 1490px;
+  }
+}
+
+.footer__menu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+  @include font_secondary($font-regular);
+  font-size: 16px;
+  line-height: 20px;
+
+  @media (min-width: $min-desktop) {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    grid-column: 2/5;
+    grid-row: 1/2;
+  }
+}
+
+.footer__menu-link {
+  width: 50%;
+  margin-bottom: 10px;
+
+  &:nth-of-type(2n) {
+    text-align: end;
+  }
+
+  @media (min-width: $min-desktop) {
+    position: relative;
+    width: auto;
+    font-size: 20px;
+    line-height: 23px;
+    padding-right: 25px;
+
+    &:nth-of-type(2n) {
+      text-align: initial;
+    }
+
+    &:hover {
+      color: #919191;
+    }
+
+    &:not(:last-of-type)::after {
+      display: block;
+      content: '|';
+      position: absolute;
+      right: 10px;
+      top: -1px;
+      font-family: "RobotoCondensed", sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 23px;
+      text-align: center;
+      color: #032233;
+      text-decoration: none;
+    }
+  }
+}
+
+//
+.footer__logos {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0;
+  margin-bottom: 30px;
+
+  @media (min-width: $min-desktop) {
+    grid-column: 1/2;
+    grid-row: 1/-1;
+    justify-content: flex-start;
+  }
+}
+
+// Логотип в подвале
+.footer__logo {
+  width: 145px;
+
+  @media (min-width: $min-desktop) {
+    width: 188px;
+  }
+}
+
+// Логотип Звезда яндекса в подвале
+.footer__star {
+  width: 65px;
+
+  @media (min-width: $min-desktop) {
+    width: 94px;
+    height: auto;
+  }
+}
+
+// Текст авторские права
+.footer__text {
+  margin-bottom: 15px;
+  font-size: $font-size-min;
+  line-height: 140%;
+  text-align: center;
+  color: #032233;
+}
+
+.footer__socials {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 15px 0;
+
+  @media (min-width: $min-desktop) {
+    justify-content: space-evenly;
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+}
+
+.footer__socials-item {
+  display: block;
+  width: 26px;
+  height: 26px;
+  margin-bottom: 5px;
+  background-color: var(--bg-color-secondary);
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+
+  &:not(:last-of-type) {
+    margin-right: 15px;
+  }
+
+  &:hover {
+    background-color: #032233;
+  }
+}
+
+.yandex-badge {
+  @media (min-width: $min-desktop) {
+    grid-column: 3/4;
+    grid-row: 2/3;
+  }
+}
+
+.footer__yell-badge {
+  @media (min-width: $min-desktop) {
+    grid-column: 4/5;
+    grid-row: 2/3;
+  }
+}
+
+.footer__phone {
+  -webkit-mask-image: url("../img/phone-call_0_1.svg");
+  mask-image: url("../img/phone-call_0_1.svg");
+}
+
+.footer__email {
+  -webkit-mask-image: url("../img/mail_ic.svg");
+  mask-image: url("../img/mail_ic.svg");
+}
+
+.footer__claim {
+  margin: 20px 0;
+  font-size: $font-size-min;
+  line-height: 16px;
+  text-align: center;
+
+  @media (min-width: $min-desktop) {
+    grid-column: 5/6;
+    grid-row: 1/-1;
+    max-width: 215px;
+    margin: 0;
+    margin-left: auto;
+    font-size: 16px;
+    line-height: 172%;
+  }
+}
+
+.footer__info {
+  padding: 15px 0 0 0;
+
+  @media (min-width: $min-desktop) {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin-top: 25px;
+    padding: 0;
+  }
+}

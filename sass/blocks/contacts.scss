@@ -1,0 +1,146 @@
+.contacts {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 0;
+  @include font_primary($font-regular);
+  font-size: 14px;
+  line-height: 18px;
+  text-indent: 0;
+  color: var(--font-color-inv);
+  background-color: var(--bg-color-secondary);
+
+  @media (min-width: $min-desktop) {
+    position: relative;
+    margin-top: 90px;
+
+    &::before {
+      position: absolute;
+      width: 100%;
+      height: 80px;
+      top: -79px;
+      background-image: url("../img/bg/contacts/blue_top.svg");
+      background-position: top;
+      background-repeat: no-repeat;
+      background-size: cover;
+      content: "";
+    }
+  }
+
+}
+
+.contacts__wrapper {
+  @media (min-width: $min-desktop) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    font-size: 16px;
+    line-height: 172%;
+    padding: 0 10px;
+  }
+
+  @media (min-width: 1550px) {
+    padding: 0;
+  }
+}
+
+.contacts__title {
+  margin-bottom: 25px;
+  padding: 10px 0;
+
+  @media (min-width: $min-desktop) {
+    flex-basis: 100%;
+    margin-bottom: 70px;
+  }
+}
+
+.contacts__subtitle {
+  padding: 0;
+  margin-bottom: 5px;
+  text-align: start;
+
+  @media (min-width: $min-desktop) {
+    font-size: 16px;
+    line-height: 172%;
+  }
+}
+
+.contacts__location {
+  margin-bottom: 20px;
+
+  @media (min-width: $min-desktop) {
+    flex-basis: 635px;
+  }
+}
+
+.contacts__working-hours {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: start;
+
+  & i {
+    display: block;
+    width: 55px;
+    font-style: normal;
+  }
+
+  & span {
+    display: flex;
+  }
+
+  @media (min-width: $min-desktop) {
+    font: inherit;
+  }
+}
+
+.contacts__details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+
+  @media (min-width: $min-desktop) {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    font: inherit;
+  }
+}
+
+.contacts__phone {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  margin-bottom: 5px;
+  padding: 0;
+  text-align: start;
+
+  @media (min-width: $min-desktop) {
+    font-size: 16px;
+    line-height: 172%;
+  }
+}
+
+.contacts__email {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  margin-bottom: 5px;
+  padding: 0;
+  text-align: start;
+
+  @media (min-width: $min-desktop) {
+    font-size: 16px;
+    line-height: 172%;
+  }
+}
+
+.contacts__phone-link {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+
+.contacts__email-link {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}

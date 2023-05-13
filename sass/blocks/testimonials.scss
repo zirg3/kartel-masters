@@ -1,0 +1,136 @@
+//
+.testimonials {
+  position: relative;
+  padding: 40px 0;
+  background-color: var(--main-bg-color-additional);
+
+  @media (min-width: $min-desktop) {
+    padding: 0 0 10px 0;
+    margin-top: 184px;
+    margin-bottom: 120px;
+
+    &::before,
+    &::after {
+      position: absolute;
+      width: 100%;
+      height: 120px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      content: "";
+    }
+
+    &::before {
+      top: -120px;
+      background-image: url("../img/bg/examples/gray_top.svg");
+      background-position: top;
+    }
+
+    &::after {
+      bottom: -120px;
+      background-image: url("../img/bg/examples/gray_bottom.svg");
+      background-position: bottom;
+      z-index: -1;
+    }
+
+    & .section__title {
+      margin-bottom: 60px;
+    }
+
+  }
+}
+
+.testimonials__video {
+  & .carousel__control {
+    top: 65%;
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    z-index: 1;
+
+    @media (min-width: $min-desktop) {
+      width: 99%;
+      max-width: 1640px;
+      z-index: 0;
+    }
+
+    @media (min-width: 1550px) {
+      width: 100%;
+    }
+
+  }
+}
+
+.testimonials__video-items {
+  justify-content: center;
+  @include font_secondary($font-bold);
+  font-size: 16px;
+  line-height: 24px;
+
+}
+
+.testimonials__video-item {
+  flex-direction: row;
+  width: 345px;
+  height: 190px;
+  object-fit: cover;
+
+  @media (min-width: $min-desktop) {
+    margin-right: 15px;
+  }
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+
+  @media (min-width: $min-desktop) {
+    width: 300px;
+    height: 167px;
+  }
+
+  @media (min-width: 1260px) {
+    width: 380px;
+    height: 210px;
+  }
+
+  @media (min-width: 1550px) {
+    width: 480px;
+    height: 260px;
+  }
+}
+
+.testimonials__video-link {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 56.25%;
+  margin-bottom: 8px;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 68px;
+    height: 48px;
+    background-color: transparent;
+    background-image: url("../img/youtube-btn.svg");
+    background-position: center;
+    background-size: contain;
+    transform: translate(-50%, -50%);
+    content: "";
+  }
+
+}
+
+.testimonials__video-text {
+  padding: 0 5px;
+  text-align: center;
+  margin: 0 auto;
+
+  @media (min-width: $min-desktop) {
+    font-size: 16px;
+    line-height: 24px;
+    text-indent: 0;
+  }
+}

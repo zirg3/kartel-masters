@@ -1,0 +1,113 @@
+//Используемые шрифты и их насыщенность
+@mixin font_primary($weight) {
+  font-family: $font-primary;
+  font-weight: $weight;
+}
+
+@mixin font_secondary($weight) {
+  font-family: $font-secondary;
+  font-weight: $weight;
+}
+
+@mixin font_basic {
+  @include font_primary($font-regular);
+  font-size: $font-size-min;
+  line-height: 16px;
+}
+
+@mixin font_small {
+  font-size: $font-size-min;
+  line-height: 16px;
+}
+
+@mixin palette_buttons {
+  color: $font-color-inverted;
+  background-color: $bg-color-secondary;
+}
+
+@mixin font_titles {
+  font-family: $font-secondary;
+  font-weight: $font-bold;
+  font-size: 18px;
+  line-height: 22px;
+
+  @media (min-width: $min-desktop) {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@mixin font_subtitles {
+  font-family: $font-secondary;
+  font-weight: $font-bold;
+  font-size: 16px;
+  line-height: 18px;
+
+  @media (min-width: $min-desktop) {
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  text-align: center;
+  text-transform: uppercase;
+}
+
+//Конец шрифтов
+
+@mixin images_adaptiv {
+  display: none;
+
+  &--mobile {
+    display: block;
+  }
+
+  @media (min-width: $min-tablet) {
+    &--mobile {
+      display: none;
+    }
+
+    &--tablet {
+      display: block;
+    }
+  }
+
+  @media (min-width: $min-desktop) {
+    &--mobile {
+      display: none;
+    }
+
+    &--tablet {
+      display: none;
+    }
+
+    &--desktop {
+      display: block;
+    }
+  }
+}
+
+// Иконки преимуществ в промо-блоке hero
+@mixin hero_advantage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 57px;
+  height: 57px;
+  background-color: var(--bg-color-primary);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  content: "";
+}
+
+//Для тестирования
+@mixin only_for_test($test-color: #a21c32) {
+  outline: 2px solid $test-color;
+  outline-offset: -2px;
+}
+
+//Для тестирования

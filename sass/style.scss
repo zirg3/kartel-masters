@@ -1,0 +1,85 @@
+// Глобальные
+/* #region Глобальные стили*/
+@import "global/variables.scss";
+@import "global/mixins.scss";
+@import "global/fonts.scss";
+@import "global/normalize.scss";
+/* #endregion */
+
+// Компоненты БЭМ
+// базовые глобальные
+/* #region Стили стандартных элементов*/
+@import "blocks/visually-hidden.scss";
+@import "blocks/button.scss";
+@import "blocks/address.scss";
+@import "blocks/list.scss";
+@import "blocks/sub-list.scss";
+@import "blocks/images.scss";
+@import "blocks/form.scss";
+@import "blocks/page.scss";
+@import "blocks/header.scss";
+@import "blocks/logo.scss";
+@import "blocks/footer.scss";
+@import "blocks/socials.scss";
+@import "blocks/section.scss";
+@import "blocks/accordion.scss";
+@import "blocks/carousel.scss";
+@import "blocks/modal.scss";
+@import "blocks/video.scss";
+/* #endregion */
+/* #region Стили для шапки сайта*/
+@import "blocks/nav.scss";
+@import "blocks/menu.scss";
+@import "blocks/submenu.scss";
+@import "blocks/schedule.scss";
+/* #endregion */
+/* #region Стили для подвала сайта*/
+@import "blocks/contacts.scss";
+@import "blocks/tags.scss";
+/* #endregion */
+/* Стили для Главная страница */
+/* #region специфические элементы только для главной*/
+@import "blocks/index.scss";
+/* #endregion */
+/* #region Раздел HERO промо блок и call to actin*/
+@import "blocks/hero.scss";
+/* #endregion */
+/* #region Раздел примеры работ и дизайнов*/
+@import "blocks/examples.scss";
+/* #endregion */
+/* #region Раздел преимущества*/
+@import "blocks/advantages.scss";
+/* #endregion */
+/* #region Раздел процедуры контакта и заключения договора*/
+@import "blocks/procedures.scss";
+/* #endregion */
+/* #region Раздел видео обзоры*/
+@import "blocks/videoreviews.scss";
+/* #endregion */
+/* #region Раздел виды ремонтов с примерами*/
+@import "blocks/repairs.scss";
+/* #endregion */
+/* #region Раздел условия сотрудничества*/
+@import "blocks/terms.scss";
+/* #endregion */
+/* #region Раздел Стоимость и сроки ремонтов*/
+@import "blocks/cost.scss";
+/* #endregion */
+/* #region Раздел Снабжение материалами*/
+@import "blocks/materials.scss";
+/* #endregion */
+/* #region Раздел видео отзывы */
+@import "blocks/testimonials.scss";
+/* #endregion */
+/* #region Раздел о нашей команде */
+@import "blocks/team.scss";
+/* #endregion */
+/* #region Раздел часто задаваемые вопросы */
+@import "blocks/faq.scss";
+/* #endregion */
+/* #region Раздел ремонт под ключ */
+@import "blocks/turnkey-repair.scss";
+/* #endregion */
+/* #region Раздел чистовой ремонт */
+@import "blocks/finishing.scss";
+/* #endregion */

@@ -1,0 +1,39 @@
+//
+.turnkey-repair {
+  padding: 40px 0;
+  background-color: var(--main-bg-color-additional);
+
+  @media (min-width: $min-desktop) {
+    padding: 60px 0;
+    font-size: 18px;
+    line-height: 24px;
+
+    &>.page--center {
+      max-width: 1140px;
+    }
+
+    .section__subtitle {
+      margin: 0 auto;
+    }
+
+  }
+
+  & .section__text {
+    margin-bottom: 10px;
+
+    @media (min-width: $min-desktop) {
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+
+  & .sub-list {
+    margin-bottom: 15px;
+    @include font_basic;
+
+    @media (min-width: $min-desktop) {
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+}

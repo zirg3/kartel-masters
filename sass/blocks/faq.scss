@@ -1,0 +1,92 @@
+//
+.faq {
+  padding: 60px 0;
+}
+
+.faq__headline {
+  margin-bottom: 15px;
+
+  @media (min-width: $min-desktop) {
+    margin-bottom: 40px;
+  }
+}
+
+.faq__questions {
+
+  & .button {
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+    padding-right: 45px;
+    @include font_secondary($font-bold);
+    font-size: 16px;
+    line-height: 20px;
+    text-align: start;
+    text-transform: uppercase;
+    background-color: transparent;
+    box-shadow: none;
+
+    @media (min-width: $min-desktop) {
+      padding-right: 0;
+    }
+  }
+
+  & .accordion__item {
+    position: relative;
+    top: -40px;
+    height: fit-content;
+    padding-top: 55px;
+    padding-right: 45px;
+    font-size: $font-size-min;
+    line-height: 20px;
+    color: var(--font-color-additional);
+  }
+
+  & .accordion__toggler::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--btn-bg-secondary);
+    background-size: 12px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15),
+      inset 0px -1px 0px rgba(0, 0, 0, 0.1);
+
+    @media (min-width: $min-desktop) {
+      position: static;
+      width: 42px;
+      height: 42px;
+      margin: 0;
+      background-size: 18px;
+    }
+  }
+
+  @media (min-width: $min-desktop) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 0.8%;
+    padding-left: 0.8%;
+
+    .accordion__toggler {
+      justify-content: space-between;
+      width: 100%;
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+
+  @media (min-width: 1550px) {
+    padding-left: 0;
+  }
+}
+
+.faq__question {
+  padding: 30px 0;
+  border-bottom: 1px solid var(--accordion-underline-color);
+
+  @media (min-width: $min-desktop) {
+    padding: 31px 0;
+  }
+}

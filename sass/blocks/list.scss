@@ -1,0 +1,23 @@
+.list {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $min-desktop) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.list__item {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $min-desktop) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.list__link {
+  text-decoration: underline;
+}

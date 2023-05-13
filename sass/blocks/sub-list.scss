@@ -1,0 +1,14 @@
+//Подсписок с маркерами галочками
+.sub-list {
+  padding-left: 2rem;
+  list-style-image: url("../img/icon_slider_true.svg");
+}
+
+
+.sub-list__item {
+  padding-left: 1%;
+
+  &:not(:last-of-type) {
+    margin-bottom: 10px;
+  }
+}

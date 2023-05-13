@@ -1,0 +1,60 @@
+// Смысловой раздел сайта
+.section {
+  display: flex;
+  flex-direction: column;
+
+  &--center {
+    flex-grow: 1;
+    align-items: center;
+    justify-content: stretch;
+    @include font_secondary($font-bold);
+    font-size: 48px;
+    line-height: 64px;
+    text-align: center;
+    color: var(--font-color-secondary);
+
+    @media (min-width: $min-desktop) {
+      margin-top: 50px;
+      font-size: 72px;
+      line-height: 84px;
+    }
+  }
+}
+
+// Заголовок раздела
+.section__title {
+  margin-bottom: 30px;
+  @include font_titles;
+
+  &--inherit {
+    font: inherit;
+    color: inherit;
+  }
+}
+
+// Подзаголовок раздела
+.section__subtitle {
+  padding: 10px 10px;
+  @include font_subtitles;
+}
+
+//Фрагмент текста в смысловом разделе
+.section__text {
+  font-style: normal;
+  font-size: $font-size-min;
+  line-height: 16px;
+  text-indent: 2rem;
+
+  &--inherit {
+    font: inherit;
+    color: inherit;
+  }
+}
+
+// Обертка в смысловом разделе
+.section__wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 686px;
+}

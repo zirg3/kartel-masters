@@ -1,0 +1,155 @@
+// Раздел о процедуре взаимодействия с компанией
+.procedures {
+  padding: 40px 0 40px 0;
+  @include font_primary($font-regular);
+  font-size: $font-size-min;
+  line-height: 16px;
+
+  & .section__title {
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: $min-desktop) {
+    position: relative;
+    padding: 0;
+    padding: 100px 0;
+
+    & .section__title {
+      padding-bottom: 70px;
+      margin-bottom: 70px;
+    }
+
+    &::before {
+      position: absolute;
+      top: 40px;
+      left: calc(50% - 960px);
+      width: 313px;
+      height: 303px;
+      background-image: url("../img/bg/procedures/ruler.webp");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 313px;
+      content: "";
+      z-index: 1;
+    }
+  }
+
+}
+
+// Список этапов процедуры
+.procedures__steps {
+  counter-reset: list;
+
+  @media (min-width: $min-desktop) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 0;
+
+    &>.list__item:last-of-type {
+      margin-bottom: 60px;
+    }
+
+  }
+
+  &>.list__item {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding-left: 90px;
+    counter-increment: list;
+
+    @media (min-width: $min-desktop) {
+      padding-left: 110px;
+    }
+  }
+
+  &>.list__item:not(:last-of-type) {
+    margin-bottom: 40px;
+
+    @media (min-width: $min-desktop) {
+      margin-bottom: 60px;
+    }
+  }
+
+  &>.list__item::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90px;
+    height: 75px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    content: "";
+  }
+}
+
+// Заголовок преимущества
+.procedures__name {
+  margin: 0;
+  margin-bottom: 7px;
+  padding-left: 10px;
+  @include font_secondary($font-bold);
+  font-size: 16px;
+  line-height: 22px;
+  text-transform: uppercase;
+
+  &::before {
+    content: counters(list, "")". ";
+  }
+
+  @media (min-width: $min-desktop) {
+    width: calc(100% - 98px);
+    padding-left: 0;
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
+
+// Описание преимущества
+.procedures__description {
+  padding-left: 10px;
+  text-indent: 0;
+
+  @media (min-width: $min-desktop) {
+    width: calc(100% - 92px);
+    padding-left: 0;
+  }
+}
+
+.procedures__request {
+  &::before {
+    background-image: url("../img/advantages/steps/request.webp");
+  }
+}
+
+.procedures__consult {
+  &::before {
+    background-image: url("../img/advantages/steps/consult.webp");
+  }
+}
+
+.procedures__agreement {
+  &::before {
+    background-image: url("../img/advantages/steps/agree.webp");
+  }
+}
+
+.procedures__designing {
+  &::before {
+    background-image: url("../img/advantages/steps/design.webp");
+  }
+}
+
+.procedures__process {
+  &::before {
+    background-image: url("../img/advantages/steps/works.webp");
+  }
+}
+
+.procedures__delivery {
+  &::before {
+    background-image: url("../img/advantages/steps/installation.webp");
+  }
+}

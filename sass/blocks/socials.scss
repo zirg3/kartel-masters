@@ -1,0 +1,19 @@
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.socials__vk {
+  -webkit-mask-image: url("../img/vk_ic.svg");
+  mask-image: url("../img/vk_ic.svg");
+}
+
+.socials__telegram {
+  -webkit-mask-image: url("../img/telegram_ic.svg");
+  mask-image: url("../img/telegram_ic.svg");
+}
+
+.socials__youtube {
+  -webkit-mask-image: url("../img/youtube_ic.svg");
+  mask-image: url("../img/youtube_ic.svg");
+}

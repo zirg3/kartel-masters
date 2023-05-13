@@ -1,0 +1,102 @@
+// Блок базовый для всего документа
+
+// корневой родитель html
+.page {
+  height: 100%;
+
+  &--column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &--center {
+    width: calc(100% - 30px);
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $min-tablet) {
+    &--center {
+      width: calc(100% - 40px);
+      max-width: 750px;
+      margin: 0 auto;
+    }
+  }
+
+  @media (min-width: $min-desktop) {
+    &--center {
+      width: calc(100% - 50px);
+      max-width: 1490px;
+      margin: 0 auto;
+    }
+  }
+
+  @media (min-width: 1550px) {
+    &--center {
+      width: 100%;
+      max-width: 1490px;
+      margin: 0 auto;
+    }
+  }
+}
+
+// тело документа Body
+.page__body {
+  min-width: 280px;
+  min-height: 100%;
+  margin: 0;
+  @include font_primary($font-regular);
+  color: var(--font-color-basic);
+  background-color: var(--bg-color-basic);
+
+  // @media (min-width: $min-desktop) {
+  //     width: 100%;
+  //     min-width: 1200px;
+  //     margin: 0 auto;
+  // }
+}
+
+// Главный заголовок страницы
+.page__title {
+  max-width: 290px;
+  margin: auto;
+  margin-bottom: 20px;
+  font-family: $font-secondary;
+  font-weight: $font-bold;
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+  text-transform: uppercase;
+
+  @media (min-width: $min-desktop) {
+    max-width: 538px;
+    margin: 0;
+    margin-bottom: 45px;
+    font-size: 40px;
+    line-height: 48px;
+    text-align: start;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+
+// вводная часть сайта - "шапка"
+.page__header {
+  flex-direction: row;
+  min-width: var(--min-width);
+  padding: 20px 0;
+}
+
+// содержание документа
+.page__content {
+  position: relative;
+  flex-grow: 1;
+}
+
+// нижний колонтитул сайта - "подвал"
+.page__footer {
+  min-height: 198px;
+  min-width: var(--min-width);
+  padding: 33px 0 25px 0;
+  color: var(--footer-color-seconadary);
+  background-color: var(--footer-bg-color);
+}

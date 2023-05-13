@@ -1,0 +1,57 @@
+//Параметры шрифта
+$font-primary: "Roboto", sans-serif;
+$font-secondary: "Roboto Cond", sans-serif;
+$font-regular: 400;
+$font-medium: 500;
+$font-bold: 700;
+$font-size-min: 16px;
+$font-form-size: 16px;
+$font-size-modal: 14px;
+$font-size-examples: 14px;
+$font-form-lineheight: 18px;
+$font-color: #000000;
+$font-color-secondary: #00659e;
+$font-color-additional: #303030;
+$font-color-header: #544f4f;
+$font-color-footer: #032233;
+$font-color-inverted: #ffffff;
+//Цвет
+$input-border-color: #acacac;
+$accordion-underline: #acacac;
+$success-color: #11c11c;
+$error-color: #c11111;
+//Фоны
+$bg-color-primary: #ffffff;
+$bg-color-secondary: #00659e;
+$bg-color-additional: #f5f5f5;
+$bg-color-modal: #ffb820;
+$bg-color-btn: #00659e;
+$bg-color-btn-secondary: #ffb820;
+
+//Размеры экрана / брейк-поинты (адаптивная сетка строится по принципу "mobile first")
+$min-width-mobile: 280px;
+$min-tablet: 768px;
+$min-desktop: 1190px;
+
+//Переменные CSS
+:root {
+  --min-width: #{$min-width-mobile};                  /* Минимальный размер до которого сжимается сайт без маштабирования*/
+  --font-color-basic: #{$font-color};                 /*Основной цвет текста документа*/
+  --font-color-inv: #{$font-color-inverted};          /* Комплементарный цвет текста документа*/
+  --font-color-secondary: #{$font-color-secondary};   /* Цвет текста дополнительный  */
+  --bg-color-basic: #{$bg-color-primary};             /* Основной цвет фона документа */
+  --bg-color-secondary: #{$bg-color-secondary};       /* Основной цвет фона документа */
+  --bg-color-modal: #{$bg-color-modal};               /* Цвет фона для модального окна */
+  --font-color-additional: #{$font-color-additional}; /* Вспомогательный цвет текста некоторых секций */
+  --header-color-secondary: #{$font-color-header};    /* Вспомогательный цвет текста для расписания рабочего времени и адреса в "шапке" сайта  --header-bg-color: #{$bg-color-primary};           // Фон "шапки" */
+  --main-color-secondary: #{$font-color-header};      /* Вспомогательный цвет текста для описания примеров */
+  --main-bg-color-additional: #{$bg-color-additional};/* Дополнительный фон у некоторых разделов главного содержимого */
+  --footer-color-seconadary: #{$font-color-footer};   /* Вспомогательный цвет текста в "подвале" */
+  --footer-bg-color: #{$bg-color-additional};         /* Фон "подвала" */
+  --btn-bg-basic: #{$bg-color-btn};                   /* Фон кнопок основной */
+  --btn-bg-secondary: #{$bg-color-btn-secondary};     /* Фон кнопок дополнительный */
+  --form-text-size: #{$font-form-size};               /* Размера шрифта в формах */
+  --form-line-height: #{$font-form-lineheight};       /* Высота строки текста в формах */
+  --form-input-border: #{$input-border-color};        /* Цвет рамки для поля ввода в формах */
+  --accordion-underline-color: #{$accordion-underline};/* Цвет нижней линнии позиции аккордиона */
+}

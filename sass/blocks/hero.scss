@@ -1,0 +1,553 @@
+// Первая секция промо и калькулятор
+.hero {
+  flex-direction: row;
+  padding-top: 30px;
+
+  @media (min-width: $min-tablet) {
+    justify-content: center;
+  }
+
+  @media (min-width: $min-desktop) {
+    justify-content: flex-start;
+  }
+}
+
+
+//Калькулятор
+.hero__calc {
+  display: none;
+
+  @media (max-width: $min-desktop) {
+
+    &--open {
+      position: fixed;
+      top: 84px;
+      left: 0;
+      right: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 90%;
+      padding: 20px;
+      background-color: var(--bg-color-basic);
+      overflow: scroll;
+      z-index: 2;
+
+      .hero__calc-title {
+        margin-bottom: 29px;
+        padding: 0;
+        @include font_secondary($font-bold);
+        font-size: 28px;
+        line-height: 32px;
+        text-align: center;
+      }
+
+      .hero__calc-types {
+        display: flex;
+        flex-direction: column;
+        width: 250px;
+        margin-bottom: 20px;
+      }
+
+      .hero__calc-titles {
+        display: block;
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 15px;
+      }
+
+      .hero__calc-options {
+        font-size: 16px;
+        line-height: 18px;
+        padding: 5px 0;
+        padding-left: 15px;
+        color: #000000;
+        background: transparent;
+        border: 1px solid #00659E;
+        border-radius: 4px;
+      }
+
+      .hero__calc-item {
+        width: 250px;
+
+        .hero__calc-titles {
+          margin-bottom: 15px;
+        }
+      }
+
+      .hero__calc-area {
+        align-self: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 250px;
+        margin-bottom: 20px;
+
+        .hero__calc-titles {
+          min-width: 100%;
+          text-align: center;
+        }
+      }
+
+      .hero__calc-result {
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .hero__calc-submit {
+        margin: 0 auto;
+      }
+
+    }
+
+  }
+
+  @media (min-width: $min-desktop) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, min-content);
+    width: 100%;
+    max-width: 760px;
+    margin-left: 7px;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 4px;
+    box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.15);
+  }
+
+  @media (min-width: 1500px) {
+    grid-template-columns: 360px 1fr;
+    margin-left: auto;
+  }
+}
+
+// Заглавие калькулятора
+.hero__calc-title {
+
+  @media (min-width: $min-desktop) {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    width: 100%;
+    margin-bottom: 29px;
+    padding: 0;
+    @include font_secondary($font-bold);
+    font-size: 28px;
+    line-height: 32px;
+    text-align: center;
+  }
+}
+
+.hero__calc-titles {
+  @include font_secondary($font-bold);
+
+  @media (min-width: $min-desktop) {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 15px;
+  }
+}
+
+.hero__calc-types {
+  @media (min-width: $min-desktop) {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+  }
+}
+
+.hero__calc-type {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  border: 1px solid #00659E;
+  border-radius: 4px;
+
+  &--left:checked+.hero__calc-type-mark {
+    color: #ffffff;
+    background-image: url("../img/headercalc_active_left.svg");
+    background-position-x: right;
+    cursor: default;
+  }
+
+  &--right:checked+.hero__calc-type-mark {
+    color: #ffffff;
+    background-image: url("../img/headercalc_active_right.svg");
+    background-position-x: left;
+    cursor: default;
+  }
+}
+
+.hero__calc-type-mark {
+  width: 50%;
+  padding: 5px 0;
+  padding-bottom: 15px;
+  @include font_secondary($font-regular);
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.hero__calc-select {
+  position: relative;
+  margin-bottom: 15px;
+
+  &::before {
+    position: absolute;
+    left: 190px;
+    bottom: 4px;
+    display: block;
+    width: 1px;
+    height: 22px;
+    background-color: #00659E;
+    z-index: 1;
+    content: "";
+  }
+
+  &::after {
+    position: absolute;
+    left: 228px;
+    bottom: 10px;
+    display: block;
+    width: 13px;
+    height: 8px;
+    background-image: url("../img/icon_select.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: 1;
+    content: "";
+  }
+}
+
+.hero__calc-options {
+  appearance: none;
+
+  @media (min-width: $min-desktop) {
+    @include font_secondary($font-regular);
+    font-size: 16px;
+    line-height: 18px;
+    padding: 5px 0;
+    padding-left: 15px;
+    color: #000000;
+    background: transparent;
+    border: 1px solid #00659E;
+    border-radius: 4px;
+  }
+}
+
+.hero__calc-option {}
+
+.hero__calc-item {
+  margin: 0;
+
+  @media (min-width: $min-desktop) {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    display: flex;
+    flex-direction: column;
+    ;
+  }
+
+  & .form__label {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+    @include font_secondary($font-regular);
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  &--control:checked+.hero__calc-item-mark {
+    justify-content: end;
+    background-color: var(--btn-bg-secondary);
+  }
+}
+
+.hero__calc-item-mark {
+  display: flex;
+  align-items: center;
+  width: 40px;
+  height: 16px;
+  margin-right: 15px;
+  background-color: var(--accordion-underline-color);
+  border-radius: 8px;
+  cursor: pointer;
+
+  &::before {
+    width: 14px;
+    height: 14px;
+    background-color: #00659E;
+    border-radius: 50%;
+    content: "";
+  }
+}
+
+.hero__calc-area {
+  margin: 0;
+
+  @media (min-width: $min-desktop) {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    display: grid;
+    grid-template-columns: 78px 1fr;
+    grid-template-rows: min-content min-content;
+    margin-top: 16px;
+  }
+
+}
+
+.hero__calc-area-label {
+  grid-column: 1/-1;
+  grid-row: 1/2;
+}
+
+.hero__calc-area-number {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  flex-direction: row;
+
+  & span {
+    padding-top: 4px;
+    @include font_secondary($font-regular);
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  & sup {
+    @include font_secondary($font-regular);
+    font-size: 10px;
+    line-height: 1px;
+  }
+}
+
+.hero__calc-area-input {
+  width: 40px;
+  padding: 5px 0;
+  margin-right: 10px;
+  @include font_secondary($font-regular);
+  font-size: $font-size-min;
+  line-height: 18px;
+  text-align: center;
+  color: #505050;
+  border: 1px solid var(--form-input-border);
+  border-radius: 4px;
+  appearance: none;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+  }
+}
+
+.hero__calc-area-range {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  align-self: center;
+  height: 4px;
+  padding: 0;
+  background-color: var(--form-input-border);
+  border: 0;
+  border-radius: 0;
+  appearance: none;
+}
+
+.hero__calc-result {
+  @media (min-width: $min-desktop) {
+    grid-column: 1/-1;
+    grid-row: 4/5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 29px;
+  }
+
+  & b {
+    color: var(--font-color-secondary);
+  }
+}
+
+.hero__calc-total {
+  margin-bottom: 10px;
+  @include font_secondary($font-bold);
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.hero__calc-period {
+  margin: 0;
+  margin-bottom: 25px;
+  @include font_secondary($font-bold);
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.hero__calc-submit {
+  padding: 12px 40px;
+  @include font_secondary($font-bold);
+  font-size: $font-size-min;
+  line-height: 14px;
+}
+
+
+
+// Призыв текст
+.hero__slogan {
+  margin-bottom: 30px;
+  @include font_subtitles;
+  text-indent: 0;
+
+  @media (min-width: $min-desktop) {
+    max-width: 550px;
+    margin-bottom: 45px;
+    text-align: start;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+
+// Промо / список преимуществ
+.hero__advantages {
+  margin-bottom: 10px;
+
+  @media (min-width: $min-desktop) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 658px;
+    margin-bottom: 0;
+  }
+}
+
+// Преимущества и иконки
+.hero__advantages-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 57px;
+  margin-bottom: 20px;
+  padding-left: 60px;
+
+  @media (min-width: $min-desktop) {
+    margin-bottom: 23px;
+  }
+
+  &::before {
+    @include hero_advantage;
+  }
+
+  &--money::before {
+    background-image: url("../img/welcome/money_1_2.svg")
+  }
+
+  &--nerves::before {
+    background-image: url("../img/welcome/nerves_1_2.svg")
+  }
+
+  &--time::before {
+    background-image: url("../img/welcome/time_1_2.svg")
+  }
+
+  &--power::before {
+    background-image: url("../img/welcome/power_1_2.svg")
+  }
+
+  &--time,
+  &--power {
+    margin-bottom: 20px;
+  }
+}
+
+// Промо раздел название преимущества
+.hero__advantages-name {
+  margin-bottom: 5px;
+  @include font_secondary($font-bold);
+  font-size: $font-size-min;
+  line-height: 16px;
+  text-transform: uppercase;
+  text-indent: 0;
+
+  @media (min-width: $min-desktop) {
+    margin-bottom: 7px;
+    padding-left: 12px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+// Промо раздел описание преимущества
+.hero__advantages-text {
+  padding-left: 12px;
+  padding-right: 10px;
+  @include font_primary($font-bold);
+  font-size: $font-size-min;
+  line-height: 16px;
+  text-indent: 0;
+
+  @media (min-width: $min-tablet) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $min-desktop) {
+    padding-right: 50px;
+    font-size: $font-size-min;
+    line-height: 18px;
+    text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  }
+
+}
+
+.hero__advantages-link {
+  text-decoration: underline;
+}
+
+// Призыв к действию блока hero
+.hero__cta {
+  padding: 8px 10px;
+  @include font_secondary($font-bold);
+  font-size: $font-size-min;
+  line-height: 21px;
+  text-align: center;
+  text-transform: uppercase;
+  border: 3px solid #00659E;
+  border-radius: 20px;
+
+  @media (min-width: $min-desktop) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1% 2%;
+    font-size: 18px;
+    margin: 0;
+  }
+
+  @media (min-width: 1550px) {
+    padding: 24px 28px;
+  }
+}
+
+.hero__cta b {
+  text-decoration: underline;
+}
+
+// Ссылка на страницу сподробной информацией или модальное окно
+.hero__cta-link {
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 7px;
+  padding: 12px 20px;
+  line-height: 14px;
+
+  @media (min-width: $min-desktop) {
+    margin: 0;
+    padding: 18px 40px;
+    font-size: $font-size-min;
+    line-height: 1px;
+  }
+}

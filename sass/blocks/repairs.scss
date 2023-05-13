@@ -1,0 +1,301 @@
+// Раздел
+.repairs {
+  position: relative;
+  padding: 22px 0 40px 0;
+
+
+  @media (min-width: $min-desktop) {
+    padding: 24px 0 113px 0;
+    background-color: transparent;
+    background-image: url("../img/bg/repairs/drill2.webp");
+    background-size: 290px;
+    background-position: left -8px bottom -52px;
+    background-repeat: no-repeat;
+  }
+}
+
+.repairs__headline {
+  @media (min-width: $min-desktop) {
+    margin-bottom: 75px;
+  }
+}
+
+//Блок с описанием разных видов ремонтов
+.repairs__demo {
+
+  & .carousel__control {
+    top: 95px;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+
+    @media (min-width: $min-desktop) {
+      top: 430px;
+      width: 99%;
+      max-width: 1640px;
+      background-color: transparent;
+    }
+
+    @media (min-width: 1550px) {
+      top: 430px;
+      width: 100%;
+      max-width: 1640px;
+    }
+  }
+
+  & .carousel__control--dots {
+    width: 100%;
+    transform: none;
+  }
+
+  & .sub-list__item {
+    @include font_primary($font-regular);
+    color: var(--font-color-additional);
+    font-size: $font-size-min;
+    line-height: 16px;
+  }
+}
+
+.repairs__types {
+  background-color: transparent;
+
+  @media (min-width: $min-desktop) {
+    justify-content: center;
+    align-items: stretch;
+    margin: 0 10px;
+  }
+
+  @media (min-width: 1550px) {
+    justify-content: space-evenly;
+  }
+}
+
+.repairs__type {
+  background-color: var(--bg-color-basic);
+
+  @media (min-width: $min-desktop) {
+    grid-template-columns: 288px 200px;
+    grid-template-rows: min-content min-content auto auto;
+    align-items: start;
+    column-gap: 5px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+    padding: 10px 15px;
+
+    &:first-of-type {
+      margin-right: 20px;
+    }
+
+    &.carousel__slide--desktop {
+      display: grid;
+      margin-bottom: initial;
+    }
+  }
+
+  @media (min-width: 1550px) {
+    grid-template-columns: 300px 320px;
+    grid-template-rows: min-content min-content auto auto;
+    column-gap: 10px;
+    padding: 25px 30px;
+
+    &:first-of-type {
+      margin-right: 0;
+    }
+  }
+}
+
+.repairs__type-name {
+  @media (min-width: $min-desktop) {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    margin-right: auto;
+    padding-left: 0;
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
+
+.repairs__examples {
+  @media (min-width: $min-desktop) {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    display: flex;
+
+    & .images {
+      width: 100%;
+    }
+  }
+
+  @media (min-width: 1550px) {
+    & .images {
+      width: 300px;
+    }
+  }
+}
+
+// Описание ремонта
+.repairs__type-description {
+  padding: 10px 0;
+
+  @media (min-width: $min-desktop) {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    display: flex;
+    padding: 0;
+  }
+
+  @media (min-width: 1550px) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+}
+
+//
+.repairs__type-composition {
+
+  @media (min-width: $min-desktop) {
+    grid-column: 1/-1;
+    grid-row: 3/4;
+    margin-top: 60px;
+    margin-bottom: 30px;
+  }
+
+  & .button {
+    margin: 0 auto;
+    padding: 12px 40px;
+    @include font_secondary($font-bold);
+    font-size: 18px;
+    line-height: 21px;
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  & .accordion__item {
+    position: relative;
+    top: -70px;
+    height: fit-content;
+    padding-top: 70px;
+  }
+
+}
+
+.repairs__terms {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 20px;
+
+  @media (min-width: $min-desktop) {
+    align-self: end;
+    grid-column: 1/2;
+    grid-row: 4/5;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1px;
+    margin: 0;
+  }
+}
+
+.repairs__price {
+  order: 2;
+  display: flex;
+  flex-direction: column;
+  @include font_primary($font-regular);
+  text-indent: 0;
+
+  @media (min-width: $min-desktop) {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 36px 22px;
+    align-items: end;
+  }
+
+  & span {
+    min-height: 18px;
+    order: 2;
+    font-size: 14px;
+    line-height: 14px;
+
+    @media (min-width: $min-desktop) {
+      min-height: initial;
+      font-size: 14px;
+      line-height: 15px;
+    }
+  }
+
+  & b {
+    @include font_secondary($font-bold);
+    color: var(--font-color-secondary);
+    font-size: 18px;
+    line-height: 20px;
+
+    @media (min-width: $min-desktop) {
+      font-size: 24px;
+      line-height: 28px;
+    }
+  }
+}
+
+.repairs__deadlines {
+  display: flex;
+  flex-direction: column;
+  @include font_primary($font-regular);
+  text-indent: 0;
+
+  @media (min-width: $min-desktop) {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 36px 22px;
+    align-items: end;
+  }
+
+  & span {
+    min-height: 18px;
+    order: 2;
+    font-size: 14px;
+    line-height: 14px;
+
+    @media (min-width: $min-desktop) {
+      min-height: initial;
+      font-size: 14px;
+      line-height: 15px;
+      vertical-align: baseline;
+    }
+  }
+
+  & b {
+    @include font_secondary($font-bold);
+    color: var(--font-color-secondary);
+    font-size: 18px;
+    line-height: 20px;
+
+    @media (min-width: $min-desktop) {
+      font-size: 24px;
+      line-height: 28px;
+    }
+  }
+}
+
+.repairs__cost {
+  width: auto;
+  margin: 0 auto;
+  padding: 12px 40px;
+  @include font_secondary($font-bold);
+  font-size: $font-size-min;
+  line-height: 14px;
+  box-shadow: 0px 5px 15px rgba(255, 184, 32, 0.15);
+
+  @media (min-width: $min-desktop) {
+    align-self: end;
+    grid-column: 2/3;
+    grid-row: 4/5;
+    font-size: $font-size-min;
+    line-height: 14px;
+  }
+
+  @media (min-width: 1550px) {
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
