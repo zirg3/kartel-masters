@@ -105,18 +105,18 @@ let calcBtn = document.querySelector(".header__calc"),
 
 if (calcBtn) {
 
-	if ( (location.pathname == "/videos.php") || (location.pathname == "/thank.php")) {
+	if (calcBody) {				// Проверяем есть ли на странице секция Hero то вызываем калькулятор
+		calcBtn.addEventListener('click', (e) => {
+			e.preventDefault();
+			calcBody.classList.toggle('hero__calc--open');
+			calcBtn.classList.toggle('header__calc--opened');
+		});
+	} else {// Если ли на странице нет секции Hero то вызываем модалку
 		calcBtn.addEventListener('click', (e) => {
 			e.preventDefault();
 			if (!modalCalc.classList.contains("modal--open")) {
 				modalCalc.classList.add("modal--open");
 			}
-		});
-	} else {
-		calcBtn.addEventListener('click', (e) => {
-			e.preventDefault();
-			calcBody.classList.toggle('hero__calc--open');
-      calcBtn.classList.toggle('header__calc--opened');
 		});
 	}
 
@@ -266,7 +266,7 @@ if (calculatorRange) {
 		totalPrice = (totalCoeff * repairSpace).toFixed(0);
 		daysFrom = (totalPrice / 10000).toFixed(0);
 		daysTo = (totalPrice / 7000).toFixed(0);
-    totalPrice = (totalPrice * 0.09).toFixed(0);
+		totalPrice = (totalPrice * 0.09).toFixed(0);
 
 		priceFileld.textContent = addSpace(totalPrice);
 		dateFromFileld.textContent = daysFrom;
