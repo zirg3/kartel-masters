@@ -121,6 +121,15 @@ if (calcBtn) {
 	}
 
 }
+let calcBtnPrice = document.querySelector(".price__link-calk")
+if (calcBtnPrice) {
+	calcBtnPrice.addEventListener('click', (e) => {
+		e.preventDefault();
+		if (!modalCalc.classList.contains("modal--open")) {
+			modalCalc.classList.add("modal--open");
+		}
+	});
+}
 
 let modalCost = document.querySelector("#cost");
 let modalCostButtons = document.querySelectorAll("[data-modal=cost]");
@@ -229,8 +238,6 @@ if (btnMore) {
 		});
 	});
 }
-
-
 
 // Калькулятор
 
