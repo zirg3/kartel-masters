@@ -1,0 +1,123 @@
+.price {
+  padding: 40px 0;
+
+  @media (min-width: $min-desktop) {
+    padding-top: 50px;
+  }
+  .examples__tab--active {
+    display: table;
+  }
+  .examples__link--active {
+      color: var(--font-color-inv);
+      background-color: var(--btn-bg-basic);
+  }
+}
+
+.price__link {
+  color: $font-color-secondary;
+  text-decoration: underline;
+  transition: 0.3s;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.price__title {
+  margin-bottom: 50px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: $bg-color-additional;
+}
+
+.price__main-text {
+  margin-bottom: 10px;
+  line-height: 20px;
+  text-indent: 0;
+  text-align: left;
+  @media (min-width: $min-desktop) {
+
+    margin-bottom: 10px;
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+
+.price__wrap {
+  padding: 40px 0;
+  &:last-of-type {
+    padding-bottom: 0;
+  }
+}
+
+.price__togglers {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 26px;
+
+  @media (min-width: $min-desktop) {
+    align-items: center;
+    width: fit-content;
+    max-width: none;
+    margin-bottom: 30px;
+  }
+}
+
+.price__category {
+  min-width: fit-content;
+  padding: 12px 24px;
+  @include font_primary($font-regular);
+  font-size: $font-size-min;
+  line-height: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: var(--bg-color-basic);
+  border-radius: 4px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  color: $font-color;
+  text-decoration: none;
+  margin-bottom: 13px;
+  &:not(:last-of-type) {
+    margin-right: 20px;
+  }
+  &--active {
+    color: var(--font-color-inv);
+    background-color: var(--btn-bg-basic);
+  }
+
+  @media (min-width: $min-desktop) {
+    width: fit-content;
+    padding: 15px 35px;
+    margin-bottom: 0;
+    &:not(:last-of-type) {
+      margin: 0;
+      margin-right: 20px;
+    }
+  }
+}
+
+.price__table {
+  border-collapse: collapse;
+}
+
+.price__table {
+  width: 100%;
+  table-layout: fixed;
+  overflow-x: auto;
+  display: none;
+  tr {
+    border-bottom: 2px solid $accordion-underline;
+  }
+  td,th {
+    padding: 10px;
+    text-align: center;
+    &:nth-of-type(1) {
+      width: 70%;
+      text-align: left;
+    }
+  }
+  td {
+    font-size: 18px;
+  }
+}
+
