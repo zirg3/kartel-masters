@@ -33,6 +33,7 @@
 }
 .video-examples__item {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   padding-bottom: 17px;
   margin-bottom: 15px;
