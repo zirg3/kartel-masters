@@ -2857,6 +2857,7 @@
 
 .videoreviews__demo-item {
   flex-direction: row;
+  flex-wrap: wrap;
   width: 345px;
   height: 190px;
   object-fit: cover;
@@ -4358,7 +4359,6 @@
 
 .video-examples__item {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
   padding-bottom: 17px;
   margin-bottom: 15px;

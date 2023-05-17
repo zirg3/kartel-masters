@@ -70,6 +70,7 @@
 
 .videoreviews__demo-item {
   flex-direction: row;
+  flex-wrap: wrap;
   width: 345px;
   height: 190px;
   object-fit: cover;
