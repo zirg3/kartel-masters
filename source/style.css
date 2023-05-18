@@ -226,9 +226,14 @@ Text Domain: kartel
   font-size: 18px;
 }
 
+.price .wp-block-button__link {
+  border: none;
+}
+
 @media (min-width: 768px) {
-  .price > .wp-block-buttons,
-  .price > .wp-block-table  {
+  /* .price > .wp-block-buttons, */
+  .price > .wp-block-table,
+  .price > .wp-container-2  {
     width: calc(100% - 40px);
     max-width: 750px;
     margin: 0 auto;
@@ -236,8 +241,9 @@ Text Domain: kartel
 }
 
 @media (min-width: 1190px) {
-  .price > .wp-block-buttons,
-  .price > .wp-block-table  {
+  /* .price > .wp-block-buttons, */
+  .price > .wp-block-table,
+  .price > .wp-container-2  {
     width: calc(100% - 50px);
     max-width: 1490px;
     margin: 0 auto;
@@ -259,11 +265,15 @@ Text Domain: kartel
     margin: 0;
     margin-right: 20px;
   }
+  .price .examples__tab--active {
+    max-width: 100%;
+  }
 }
 
 @media (min-width: 1550px) {
-  .price > .wp-block-buttons,
-  .price > .wp-block-table  {
+  /* .price > .wp-block-buttons, */
+  .price > .wp-block-table,
+  .price > .wp-container-2  {
     width: 100%;
     max-width: 1490px;
     margin: 0 auto;
