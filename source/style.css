@@ -1,0 +1,139 @@
+/*
+Theme Name: Kartel
+Theme URI: https://webpeternet.ru/themes/kartel
+Description: Тема для сайта компании ООО "Картель Мастеров".
+Requires at least: 6.1
+Tested up to: 6.2
+Requires PHP: 5.6
+Version: 1.1
+Text Domain: kartel
+*/
+
+.terms .wp-block-group {
+  display: flex;
+  flex-direction: column;
+}
+.terms .wp-block-group:not(:last-of-type) {
+  margin-bottom: 50px;
+}
+@media (min-width: 1190px) {
+  .terms .wp-block-group {
+    min-width: 49.3%;
+    margin-right: 20px;
+    text-align: start;
+  }
+}
+.terms .wp-block-heading {
+  margin-bottom: 20px;
+  font-family: "Roboto Cond", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  text-transform: uppercase;
+}
+@media (min-width: 1190px) {
+	.terms .wp-block-heading {
+    margin-bottom: 40px;
+		font-size: 40px;
+    line-height: 48px;
+    text-align: start;
+  }
+}
+.terms .wp-block-group > p {
+  padding: 15px 25px;
+  font-size: 16px;
+  line-height: 16px;
+  border-radius: 30px;
+  background-color: var(--main-bg-color-additional);
+}
+.terms .wp-block-group > p:not(:last-of-type) {
+  margin-bottom: 20px;
+}
+@media (min-width: 1190px) {
+	.terms .wp-block-group > p {
+    padding: 20px 50px;
+    font-size: 16px;
+    line-height: 20px;
+    border-radius: 45px;
+  }
+}
+
+.team__list > .wp-block-group {
+  align-items: center!important;
+  justify-content: center!important;
+  min-height: 560px;
+}
+
+@media (min-width: 1190px) {
+  .team__list > .wp-block-group {
+    min-height: auto;
+  }
+}
+
+.team__list > .wp-block-group img {
+  width: auto;
+  height: auto;
+}
+
+.team__list > .wp-block-group p:first-of-type {
+	padding: 10px 10px;
+  font-family: "Roboto Cond", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 20px;
+  line-height: 28px;
+}
+@media (min-width: 1190px) {
+  .team__list > .wp-block-group p:first-of-type {
+    padding: 0 7px;
+    margin-top: 15px;
+    font-size: 24px;
+    line-height: 36px;
+  }
+}
+
+
+.team__list > .wp-block-group p:last-of-type {
+  font-size: 16px;
+  line-height: 21px;
+  text-indent: 0;
+  text-align: center;
+	font-style: normal;
+  }
+
+@media (min-width: 1190px) {
+	.team__list > .wp-block-group p:last-of-type {
+    min-width: 304px;
+    padding: 0 7px;
+    margin-top: 5px;
+    font-size: 18px;
+  }
+}
+
+.team__list > .wp-block-group.carousel__slide {
+	display: none;
+}
+
+
+.team__list > .wp-block-group.carousel__slide {
+  display: none;
+  flex-shrink: 0;
+  width: 100%;
+  margin-bottom: auto;
+}
+
+.team__list > .wp-block-group.carousel__slide--mobile {
+  display: flex;
+}
+@media (min-width: 1190px) {
+  .team__list > .wp-block-group.carousel__slide {
+    z-index: 1;
+  }
+  .team__list > .wp-block-group.carousel__slide--desktop {
+    display: flex;
+    flex-direction: column;
+    width: min-content;
+  }
+}
