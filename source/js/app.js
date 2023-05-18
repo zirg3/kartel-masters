@@ -198,7 +198,7 @@ modalCallbackClose.addEventListener('click', (e) => {
 	}
 });
 
-
+/*
 //Примеры работ и дизайнов
 let tabsTogglers = document.querySelectorAll("[data-examples]");
 let tabs = document.querySelectorAll(".examples__tab");
@@ -238,8 +238,6 @@ if (btnMore) {
 		});
 	});
 }
-// price page
-
 
 // Калькулятор
 
