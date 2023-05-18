@@ -227,7 +227,7 @@ Text Domain: kartel
 }
 
 .price .wp-block-button__link {
-  border: none;
+  border: none !important;
 }
 
 @media (min-width: 768px) {
