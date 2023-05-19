@@ -540,7 +540,7 @@
 @media (min-width: 1190px) {
   .footer__links {
     display: grid;
-    grid-template-columns: 1fr 200px 180px 180px 1fr;
+    grid-template-columns: 1fr 220px 180px 180px 1fr;
     grid-template-rows: auto min-content;
     column-gap: 20px;
     width: 100%;
@@ -665,8 +665,8 @@
 
 .footer__socials-item {
   display: block;
-  width: 26px;
-  height: 26px;
+  width: 34px;
+  height: 34px;
   margin-bottom: 5px;
   background-color: var(--bg-color-secondary);
   -webkit-mask-size: cover;
@@ -675,7 +675,7 @@
   mask-repeat: no-repeat;
 }
 .footer__socials-item:not(:last-of-type) {
-  margin-right: 15px;
+  margin-right: 10px;
 }
 .footer__socials-item:hover {
   background-color: #032233;
