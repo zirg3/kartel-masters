@@ -1,0 +1,32 @@
+.video-review {
+  padding-top: 40px;
+}
+.video-review__video {
+  max-width: 410px;
+  width: 100%;
+  max-height: 220px;
+  height: 100%;
+  margin: 0 auto;
+  padding-bottom: 0;
+  margin-bottom: 40px;
+  @media (min-width: $min-desktop) {
+    max-width: 530px;
+    max-height: 290px;
+  }
+}
+
+.video-review__review {
+  margin: 0 auto;
+  width: 100%;
+  & img {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+  }
+  @media (min-width: $min-tablet) {
+    width: 60%;
+  }
+  @media (min-width: $min-desktop) {
+    width: 35%;
+  }
+}

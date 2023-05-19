@@ -198,7 +198,7 @@ modalCallbackClose.addEventListener('click', (e) => {
 	}
 });
 
-/*
+
 //Примеры работ и дизайнов
 let tabsTogglers = document.querySelectorAll("[data-examples]");
 let tabs = document.querySelectorAll(".examples__tab");
@@ -698,3 +698,29 @@ forms.forEach((elements) => {
 	}
 
 });
+
+
+//Swiper portfolio
+let swiperPortf1 = document.querySelector('.swiper-1')
+let swiperPortf2 = document.querySelector('.swiper-2')
+
+if(swiperPortf1 && swiperPortf2) {
+  var swiper = new Swiper(".swiper-2", {
+    lazy: true,
+    spaceBetween: 10,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesProgress: true,
+  });
+  var swiper2 = new Swiper(".swiper-1", {
+    lazy: true,
+    spaceBetween: 10,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    thumbs: {
+      swiper: swiper,
+    },
+  });
+}

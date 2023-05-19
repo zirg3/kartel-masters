@@ -3586,6 +3586,11 @@
   font-size: 16px;
   line-height: 24px;
 }
+.testimonials__video-items img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 .testimonials__video-item {
   flex-direction: row;
@@ -4389,6 +4394,160 @@
     font-size: 16px;
     line-height: 24px;
     text-indent: 0;
+  }
+}
+
+/* #endregion */
+/* Стили для страницы portfolio detail*/
+/* #region */
+.portfolio-detail__wrap {
+  display: flex;
+  background-color: #ffffff;
+  padding: 20px;
+  flex-direction: column;
+}
+@media (min-width: 1190px) {
+  .portfolio-detail__wrap {
+    flex-direction: row;
+  }
+}
+
+.portfolio-detail__slider-cont,
+.portfolio-detail__text-cont {
+  width: 100%;
+  overflow: hidden;
+}
+@media (min-width: 1190px) {
+  .portfolio-detail__slider-cont,
+  .portfolio-detail__text-cont {
+    width: 50%;
+  }
+}
+
+.portfolio-detail .section__text {
+  margin-bottom: 20px;
+}
+
+@media (min-width: 1190px) {
+  .portfolio-detail .examples__heading {
+    padding-top: 50px;
+  }
+}
+.portfolio-detail__slider-cont {
+  height: 100%;
+}
+
+.portfolio-detail__swiper-main .swiper-slide,
+.portfolio-detail__swiper-second .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.portfolio-detail__swiper-main .swiper-slide img,
+.portfolio-detail__swiper-second .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.portfolio-detail__swiper-main {
+  width: 100%;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.portfolio-detail__swiper-main {
+  height: auto;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .portfolio-detail__swiper-main {
+    height: 500px;
+  }
+}
+
+.portfolio-detail__swiper-second {
+  height: auto;
+  box-sizing: border-box;
+  padding: 10px 0;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .portfolio-detail__swiper-second {
+    height: 100px;
+  }
+}
+
+.portfolio-detail__slider-cont .button::after,
+.portfolio-detail__slider-cont .button::before {
+  font-size: 20px;
+}
+
+.portfolio-detail__slider-cont .button {
+  background-image: none;
+}
+
+.portfolio-detail__swiper-second .swiper-slide {
+  width: 25%;
+  height: 100%;
+  opacity: 0.4;
+}
+
+.portfolio-detail__swiper-second .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+.portfolio-detail__swiper-second .swiper-slide img,
+.portfolio-detail__swiper-main .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-review {
+  padding-top: 40px;
+}
+
+.video-review__video {
+  max-width: 410px;
+  width: 100%;
+  max-height: 220px;
+  height: 100%;
+  margin: 0 auto;
+  padding-bottom: 0;
+  margin-bottom: 40px;
+}
+@media (min-width: 1190px) {
+  .video-review__video {
+    max-width: 530px;
+    max-height: 290px;
+  }
+}
+
+.video-review__review {
+  margin: 0 auto;
+  width: 100%;
+}
+.video-review__review img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+@media (min-width: 768px) {
+  .video-review__review {
+    width: 60%;
+  }
+}
+@media (min-width: 1190px) {
+  .video-review__review {
+    width: 35%;
   }
 }
 
