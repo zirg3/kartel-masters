@@ -755,6 +755,11 @@
   mask-image: url("../img/youtube_ic.svg");
 }
 
+.socials__ok {
+  -webkit-mask-image: url("../img/ok_ic.svg");
+  mask-image: url("../img/ok_ic.svg");
+}
+
 .section {
   display: flex;
   flex-direction: column;
