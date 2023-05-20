@@ -4145,9 +4145,6 @@
     padding-top: 50px;
   }
 }
-.price .examples__tab--active {
-  display: table;
-}
 .price .examples__link--active {
   color: var(--font-color-inv);
   background-color: var(--btn-bg-basic);

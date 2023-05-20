@@ -4,9 +4,6 @@
   @media (min-width: $min-desktop) {
     padding-top: 50px;
   }
-  .examples__tab--active {
-    display: table;
-  }
   .examples__link--active {
       color: var(--font-color-inv);
       background-color: var(--btn-bg-basic);
