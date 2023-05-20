@@ -198,7 +198,7 @@ modalCallbackClose.addEventListener('click', (e) => {
 	}
 });
 
-
+/*
 //Примеры работ и дизайнов
 let tabsTogglers = document.querySelectorAll("[data-examples]");
 let tabs = document.querySelectorAll(".examples__tab");
@@ -238,7 +238,7 @@ if (btnMore) {
 		});
 	});
 }
-
+*/
 // Калькулятор
 
 let calculatorRange = document.querySelector(".hero__calc-area-range");
