@@ -40,6 +40,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   margin-bottom: 14px;
+
   @include font_secondary($font-regular);
   font-size: 16px;
   line-height: 20px;
@@ -77,13 +78,13 @@
 
     &:not(:last-of-type)::after {
       display: block;
-      content: '|';
+      content: "|";
       position: absolute;
       right: 10px;
       top: -1px;
       font-family: "RobotoCondensed", sans-serif;
       font-style: normal;
-      font-weight: normal;
+      font-weight: 400;
       font-size: 20px;
       line-height: 23px;
       text-align: center;
@@ -157,9 +158,9 @@
   height: 34px;
   margin-bottom: 5px;
   background-color: var(--bg-color-secondary);
-  -webkit-mask-size: cover;
+  //-webkit-mask-size: cover;
   mask-size: cover;
-  -webkit-mask-repeat: no-repeat;
+  //-webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
 
   &:not(:last-of-type) {
@@ -169,7 +170,6 @@
   &:hover {
     background-color: #032233;
   }
-
 }
 
 .yandex-badge {
@@ -187,12 +187,12 @@
 }
 
 .footer__phone {
-  -webkit-mask-image: url("../img/phone-call_0_1.svg");
+  //-webkit-mask-image: url("../img/phone-call_0_1.svg");
   mask-image: url("../img/phone-call_0_1.svg");
 }
 
 .footer__email {
-  -webkit-mask-image: url("../img/mail_ic.svg");
+  //-webkit-mask-image: url("../img/mail_ic.svg");
   mask-image: url("../img/mail_ic.svg");
 }
 

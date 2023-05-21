@@ -35,18 +35,17 @@
     & .section__title {
       margin-bottom: 60px;
     }
-
   }
 }
 
 .videoreviews__demo {
-
   & .carousel__control {
     top: 65%;
     width: 100%;
     max-width: 500px;
     margin: 0 auto;
     z-index: 1;
+
     @media (min-width: $min-desktop) {
       top: 65%;
       width: 99%;
@@ -56,13 +55,13 @@
 
     @media (min-width: 1550px) {
       width: 100%;
-
     }
   }
 }
 
 .videoreviews__demo-items {
   justify-content: center;
+
   @include font_secondary($font-bold);
   font-size: 16px;
   line-height: 24px;
@@ -85,18 +84,18 @@
 
   @media (min-width: $min-desktop) {
 
-      width: 300px;
-      height: 167px;
+    width: 300px;
+    height: 167px;
   }
 
   @media (min-width: 1260px) {
-      width: 380px;
-      height: 210px;
+    width: 380px;
+    height: 210px;
   }
 
   @media (min-width: 1550px) {
-      width: 480px;
-      height: 260px;
+    width: 480px;
+    height: 260px;
   }
 }
 
@@ -124,7 +123,7 @@
     background-image: url("../img/youtube-btn.svg");
     background-position: center;
     background-size: contain;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     content: "";
   }
 }

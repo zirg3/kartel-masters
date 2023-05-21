@@ -21,7 +21,7 @@
       content: "";
     }
 
-    &>.section {
+    & > .section {
       flex-direction: row;
     }
   }
@@ -57,6 +57,7 @@
   }
 
   padding: 15px 25px;
+
   @include font_small;
   border-radius: 30px;
   background-color: var(--main-bg-color-additional);

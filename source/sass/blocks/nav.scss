@@ -29,7 +29,6 @@
       background-color: transparent;
     }
   }
-
 }
 
 .nav__menu {
@@ -68,7 +67,7 @@
   border: none;
   z-index: 4;
   transform: rotateZ(0);
-  transition: .4s ease all;
+  transition: 0.4s ease all;
 
   &::before,
   &::after {
@@ -79,7 +78,7 @@
     background-color: var(--btn-bg-secondary);
     content: "";
     transform: rotateZ(0);
-    transition: .4s ease all;
+    transition: 0.4s ease all;
   }
 
   &::before {
@@ -89,6 +88,7 @@
   &::after {
     bottom: -12px;
   }
+
   @media (max-width: $min-desktop) {
     &--open::before {
       top: 0;
@@ -104,7 +104,7 @@
       background-color: transparent;
     }
 
-    &--open+.nav__menu {
+    &--open + .nav__menu {
       display: flex;
       z-index: 3;
     }

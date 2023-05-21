@@ -1,5 +1,4 @@
 //
-
 .finishing {
   padding: 40px 0;
 
@@ -9,11 +8,9 @@
     font-size: 18px;
     line-height: 24px;
 
-
     .section__subtitle {
       margin: 0 auto;
     }
-
   }
 
   & .section__text {
@@ -27,6 +24,7 @@
 
   & .sub-list {
     margin-bottom: 15px;
+
     @include font_basic;
 
     @media (min-width: $min-desktop) {

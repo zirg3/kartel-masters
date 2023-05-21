@@ -12,12 +12,12 @@
 }
 
 .faq__questions {
-
   & .button {
     justify-content: flex-start;
     margin: 0;
     padding: 0;
     padding-right: 45px;
+
     @include font_secondary($font-bold);
     font-size: 16px;
     line-height: 20px;
@@ -51,8 +51,8 @@
     border-radius: 50%;
     background-color: var(--btn-bg-secondary);
     background-size: 12px;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15),
-      inset 0px -1px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15),
+      inset 0 -1px 0 rgba(0, 0, 0, 0.1);
 
     @media (min-width: $min-desktop) {
       position: static;

@@ -1,5 +1,7 @@
 // Для главной страницы только
-.index {}
+.index {
+  z-index: initial;
+}
 
 // Фоновое изображение для первой секции
 .index__wrapper {
@@ -12,10 +14,9 @@
   background-position-y: -41px;
 
 
-  @media (min-width:$min-tablet) {
+  @media (min-width: $min-tablet) {
     background-image: url("../img/bg/hero/fullscreen-desktop.webp");
     background-size: 1962px;
     background-position-y: -60px;
   }
-
 }

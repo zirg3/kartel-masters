@@ -35,7 +35,6 @@
     & .section__title {
       margin-bottom: 60px;
     }
-
   }
 }
 
@@ -56,12 +55,12 @@
     @media (min-width: 1550px) {
       width: 100%;
     }
-
   }
 }
 
 .testimonials__video-items {
   justify-content: center;
+
   @include font_secondary($font-bold);
   font-size: 16px;
   line-height: 24px;
@@ -126,7 +125,6 @@
     transform: translate(-50%, -50%);
     content: "";
   }
-
 }
 
 .testimonials__video-text {

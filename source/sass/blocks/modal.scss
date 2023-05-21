@@ -1,5 +1,4 @@
 //Модальное окно
-
 .modal {
   position: fixed;
   top: 0;
@@ -25,7 +24,6 @@
   align-items: center;
   justify-content: center;
   width: 98%;
-  min-height: fit-content;
   margin: 0 auto;
   height: min-content;
   min-height: 100px;
@@ -110,8 +108,8 @@
     font-size: $font-size-min;
     line-height: 140%;
     color: rgba(0, 0, 0, 0.5);
-    background: #FFFFFF;
-    border: 1px solid #F5F5F5;
+    background: #ffffff;
+    border: 1px solid #f5f5f5;
     outline: none;
 
     @media (min-width: $min-tablet) {
@@ -123,6 +121,7 @@
     margin-left: 20px;
     margin-bottom: 10px;
     padding-left: 5px;
+
     @include font_secondary($font-regular);
     font-size: $font-size-min;
     line-height: 14px;
@@ -143,6 +142,7 @@
   display: block;
   margin-bottom: 5px;
   padding: 0 10px;
+
   @include font_secondary($font-regular);
   font-size: 22px;
   line-height: 140%;
@@ -151,7 +151,6 @@
 }
 
 .modal__content-feedback {
-
   .form__group {
 
     font-size: $font-size-modal;
@@ -170,6 +169,7 @@
 
   .button {
     padding: 12px 40px;
+
     @include font_primary($font-bold);
     font-size: $font-size-min;
     line-height: 14px;

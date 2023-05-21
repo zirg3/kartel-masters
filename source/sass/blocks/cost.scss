@@ -33,7 +33,6 @@
     padding: 80px 0 78px 0;
     background-image: none;
   }
-
 }
 
 .cost__wrapper {
@@ -59,6 +58,7 @@
 
 .cost__message {
   margin-bottom: 285px;
+
   @include font_small;
 
   @media (min-width: $min-desktop) {
@@ -67,7 +67,6 @@
     font-size: $font-size-min;
     line-height: 16px;
   }
-
 }
 
 .cost__request {

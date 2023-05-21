@@ -3,33 +3,39 @@
   flex-direction: column;
   // grid-auto-rows: 200px;
   grid-gap: 20px;
-  @media (min-width:$min-tablet) {
+
+  @media (min-width: $min-tablet) {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
-  @media (min-width:$min-desktop) {
+
+  @media (min-width: $min-desktop) {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
+
 .other-jobs__item a {
   display: flex;
   flex-direction: column;
   color: $font-color;
   text-decoration: none;
+
   &:hover {
     text-decoration: underline;
+
     img {
       opacity: 0.7;
     }
   }
 }
+
 .other-jobs__item img {
   width: 100%;
   object-fit: cover;
   transition: 0.3s;
   // max-height: 300px;
 }
-.other-jobs__item h3{
+
+.other-jobs__item h3 {
   order: 2;
 }
-

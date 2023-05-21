@@ -2,21 +2,25 @@
   @media (min-width: $min-desktop) {
     padding-top: 25px;
   }
+
   .examples__item--hidden {
     display: none;
   }
 }
+
 .video-examples__link {
   position: relative;
   width: 100%;
   max-height: 395px;
   height: auto;
   margin-bottom: 10px;
+
   .images {
     max-height: 395px;
     height: auto;
   }
 }
+
 .video-examples__video-link::before {
   position: absolute;
   top: 50%;
@@ -25,27 +29,29 @@
   width: 68px;
   height: 48px;
   background-color: transparent;
-  background-image: url(../img/youtube-btn.svg);
+  background-image: url("../img/youtube-btn.svg");
   background-position: center;
   background-size: contain;
   transform: translate(-50%, -50%);
   content: "";
 }
+
 .video-examples__item {
   display: flex;
   flex-direction: column;
   padding-bottom: 17px;
   margin-bottom: 15px;
   background-color: var(--bg-color-basic);
+
   @media (min-width: $min-desktop) {
     display: grid;
     padding: 20px;
   }
+
   &--hidden {
     display: none;
   }
 }
-
 
 .video-examples__video-text {
   padding: 0 5px;
