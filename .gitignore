@@ -1,14 +1,12 @@
 .DS_Store
 .idea
 .vscode
-.gitattributes
 *.ai
 *.log
 *.pdf
 *.psd
 *.sublime*
-*.json
 node_modules/
+build/
 npm-debug.*
 Thumbs.db
-template.html
