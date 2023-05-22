@@ -96,21 +96,29 @@
 //Хлебные крошки
 .page__content-bread {
   margin: 10px auto;
+  font-size: 14px;
+  line-height: 14px;
 
   @media (min-width: $min-tablet) {
     margin: 15px auto;
+    font-size: 16px;
+    line-height: 18px;
   }
 
   @media (min-width: $min-desktop) {
     margin: 15px auto 25px auto;
+    font-size: 18px;
+    line-height: 20px;
   }
 }
 
 //Контейнер для вывода содержимого из редактора WP
 .page__content-wp {
+  max-width: 400px;
   margin: 0 auto 20px auto;
 
   @media (min-width: $min-tablet) {
+    max-width: 1170px;
     margin: 0 auto 30px auto;
   }
 
