@@ -26,6 +26,10 @@
   }
 }
 
+.header__wrapper {
+  z-index: 50;
+}
+
 //Заголовок вводной части
 .header__title {
   font-weight: $font-bold;
@@ -147,6 +151,11 @@
     order: 1;
     margin: 0;
     margin-left: auto;
+
+    &-link {
+      font-size: 22px;
+      line-height: 26px;
+    }
   }
 
   @media (min-width: $min-desktop) {
