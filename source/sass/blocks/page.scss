@@ -125,6 +125,20 @@
   @media (min-width: $min-desktop) {
     margin: 0 auto 40px auto;
   }
+
+  > ul {
+  padding-left: 2rem;
+  list-style-image: url("../img/icon_slider_true.svg");
+  }
+
+  li {
+    padding-left: 1%;
+
+    &:not(:last-of-type) {
+      margin-bottom: 10px;
+    }
+  }
+
 }
 
 // нижний колонтитул сайта - "подвал"
