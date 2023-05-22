@@ -292,7 +292,7 @@ Text Domain: kartel
   }
 }
 
-.wp-block-heading > .page__title {
+.wp-block-heading.page__title {
   max-width: initial;
   margin: auto;
   margin-bottom: 20px;
@@ -305,7 +305,7 @@ Text Domain: kartel
 }
 
 @media (min-width: 1190px) {
-  .wp-block-heading > .page__title {
+  .wp-block-heading.page__title {
     max-width: 538px;
     margin: 0;
     margin-bottom: 45px;
