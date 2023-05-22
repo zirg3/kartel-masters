@@ -95,9 +95,12 @@
 
 //Хлебные крошки
 .page__content-bread {
-  margin: 10px auto;
-  font-size: 14px;
+  margin: 10px auto 20px auto;
+  font-size: 12px;
   line-height: 14px;
+
+  @include font_primary($font-regular);
+  color: var(--main-color-secondary);
 
   @media (min-width: $min-tablet) {
     margin: 15px auto;
