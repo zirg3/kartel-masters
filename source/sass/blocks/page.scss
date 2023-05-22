@@ -113,6 +113,10 @@
     font-size: 18px;
     line-height: 20px;
   }
+
+  a {
+    color: inherit;
+  }
 }
 
 //Контейнер для вывода содержимого из редактора WP
@@ -129,7 +133,7 @@
     margin: 0 auto 40px auto;
   }
 
-  > ul {
+  >ul {
     padding-left: 2rem;
     list-style-image: url("../img/icon_slider_true.svg");
   }
