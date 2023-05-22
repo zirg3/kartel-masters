@@ -93,6 +93,32 @@
   flex-grow: 1;
 }
 
+//Хлебные крошки
+.page__content-bread {
+  margin: 10px 0;
+
+  @media (min-width: $min-tablet) {
+    margin: 15px 0;
+  }
+
+  @media (min-width: $min-desktop) {
+    margin: 15px 0 25px 0;
+  }
+}
+
+//Контейнер для вывода содержимого из редактора WP
+.page__content-wp {
+  margin: 0 auto 20px auto;
+
+  @media (min-width: $min-tablet) {
+    margin: 0 auto 30px auto;
+  }
+
+  @media (min-width: $min-desktop) {
+    margin: 0 auto 40px auto;
+  }
+}
+
 // нижний колонтитул сайта - "подвал"
 .page__footer {
   min-height: 198px;
