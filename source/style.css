@@ -15,9 +15,11 @@ Text Domain: kartel
   display: flex;
   flex-direction: column;
 }
+
 .terms .wp-block-group:not(:last-of-type) {
   margin-bottom: 50px;
 }
+
 @media (min-width: 1190px) {
   .terms .wp-block-group {
     min-width: 49.3%;
@@ -25,6 +27,7 @@ Text Domain: kartel
     text-align: start;
   }
 }
+
 .terms .wp-block-heading {
   margin-bottom: 20px;
   font-family: "Roboto Cond", sans-serif;
@@ -34,14 +37,16 @@ Text Domain: kartel
   text-align: center;
   text-transform: uppercase;
 }
+
 @media (min-width: 1190px) {
-	.terms .wp-block-heading {
+  .terms .wp-block-heading {
     margin-bottom: 40px;
-		font-size: 40px;
+    font-size: 40px;
     line-height: 48px;
     text-align: start;
   }
 }
+
 .terms .wp-block-group > p {
   padding: 15px 25px;
   font-size: 16px;
@@ -49,11 +54,13 @@ Text Domain: kartel
   border-radius: 30px;
   background-color: var(--main-bg-color-additional);
 }
+
 .terms .wp-block-group > p:not(:last-of-type) {
   margin-bottom: 20px;
 }
+
 @media (min-width: 1190px) {
-	.terms .wp-block-group > p {
+  .terms .wp-block-group > p {
     padding: 20px 50px;
     font-size: 16px;
     line-height: 20px;
@@ -79,7 +86,7 @@ Text Domain: kartel
 }
 
 .team__list > .wp-block-group p:first-of-type {
-	padding: 10px 10px;
+  padding: 10px 10px;
   font-family: "Roboto Cond", sans-serif;
   font-weight: 700;
   text-align: center;
@@ -87,6 +94,7 @@ Text Domain: kartel
   font-size: 20px;
   line-height: 28px;
 }
+
 @media (min-width: 1190px) {
   .team__list > .wp-block-group p:first-of-type {
     padding: 0 7px;
@@ -102,22 +110,17 @@ Text Domain: kartel
   line-height: 21px;
   text-indent: 0;
   text-align: center;
-	font-style: normal;
-  }
+  font-style: normal;
+}
 
 @media (min-width: 1190px) {
-	.team__list > .wp-block-group p:last-of-type {
+  .team__list > .wp-block-group p:last-of-type {
     min-width: 304px;
     padding: 0 7px;
     margin-top: 5px;
     font-size: 18px;
   }
 }
-
-.team__list > .wp-block-group.carousel__slide {
-	display: none;
-}
-
 
 .team__list > .wp-block-group.carousel__slide {
   display: none;
@@ -129,10 +132,12 @@ Text Domain: kartel
 .team__list > .wp-block-group.carousel__slide--mobile {
   display: flex;
 }
+
 @media (min-width: 1190px) {
   .team__list > .wp-block-group.carousel__slide {
     z-index: 1;
   }
+
   .team__list > .wp-block-group.carousel__slide--desktop {
     display: flex;
     flex-direction: column;
@@ -147,17 +152,13 @@ Text Domain: kartel
 }
 
 .price > .wp-block-buttons {
+  display: flex;
+  flex-wrap: wrap;
   height: 100%;
   width: calc(100% - 30px);
   margin: 0 auto;
-  margin-bottom: 20px;
-  margin-top: 20px;
-}
-
-.price > .wp-block-buttons{
-  display: flex;
-  flex-wrap: wrap;
   margin-bottom: 26px;
+  margin-top: 20px;
 }
 
 .price .wp-block-button {
@@ -179,7 +180,7 @@ Text Domain: kartel
 }
 
 .examples__link--active {
-  color: #ffffff !;
+  color: #ffffff !important;
   background-color: #00659e !important;
 }
 
@@ -187,16 +188,14 @@ Text Domain: kartel
   margin-right: 20px;
 }
 
-.price .has-fixed-layout {
-  border-collapse: collapse;
-}
 
-.price .has-fixed-layout{
+.price .has-fixed-layout {
   width: 100%;
   table-layout: fixed;
   overflow-x: auto;
   min-width: 400px;
   /* display: none; */
+  border-collapse: collapse;
 }
 
 .price .wp-block-table {
@@ -236,11 +235,12 @@ Text Domain: kartel
 @media (min-width: 768px) {
   /* .price > .wp-block-buttons, */
   .price > .wp-block-table,
-  .price > .wp-container-2  {
+  .price > .wp-container-2 {
     width: calc(100% - 40px);
     max-width: 750px;
     margin: 0 auto;
   }
+
   .price .wp-block-button {
     min-width: fit-content;
   }
@@ -254,6 +254,7 @@ Text Domain: kartel
     max-width: 1490px;
     margin: 0 auto;
   }
+
   .price > .wp-block-buttons {
     align-items: center;
     width: fit-content;
@@ -262,15 +263,18 @@ Text Domain: kartel
     margin-bottom: 20px;
     margin-top: 20px;
   }
+
   .price > .wp-block-button {
     width: fit-content;
     padding: 15px 35px;
     margin-bottom: 0;
   }
+
   .price > .wp-block-button:not(:last-of-type) {
     margin: 0;
     margin-right: 20px;
   }
+
   .price .examples__tab--active {
     max-width: 100%;
   }
@@ -279,7 +283,7 @@ Text Domain: kartel
 @media (min-width: 1550px) {
   /* .price > .wp-block-buttons, */
   .price > .wp-block-table,
-  .price > .wp-container-2  {
+  .price > .wp-container-2 {
     width: 100%;
     max-width: 1490px;
     margin: 0 auto;
