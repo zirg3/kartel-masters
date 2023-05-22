@@ -95,14 +95,14 @@
 
 //Хлебные крошки
 .page__content-bread {
-  margin: 10px 0;
+  margin: 10px auto;
 
   @media (min-width: $min-tablet) {
-    margin: 15px 0;
+    margin: 15px auto;
   }
 
   @media (min-width: $min-desktop) {
-    margin: 15px 0 25px 0;
+    margin: 15px auto 25px auto;
   }
 }
 
