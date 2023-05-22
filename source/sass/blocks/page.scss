@@ -127,8 +127,8 @@
   }
 
   > ul {
-  padding-left: 2rem;
-  list-style-image: url("../img/icon_slider_true.svg");
+    padding-left: 2rem;
+    list-style-image: url("../img/icon_slider_true.svg");
   }
 
   li {
@@ -139,6 +139,17 @@
     }
   }
 
+  p {
+    font-style: normal;
+    font-size: $font-size-min;
+    line-height: 16px;
+    text-indent: 2rem;
+
+    &--inherit {
+      font: inherit;
+      color: inherit;
+    }
+  }
 }
 
 // нижний колонтитул сайта - "подвал"
