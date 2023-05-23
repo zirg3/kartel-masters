@@ -18,7 +18,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<link rel="canonical" href="https://kartel-masterov.ru">
-	<link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 	<link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
@@ -151,8 +151,89 @@
   </div>
 
 	<main class="page__content index">
+    <form class="hero__calc form hero__calc--separate" action="/raschet-stoimosti.php" method="post">
+      <h2 class="hero__calc-title form__legend">Рассчитайте стоимость ремонта</h2>
 
-		
+      <div class="hero__calc-types">
+        <label class="hero__calc-select form__label">
+          <span class="hero__calc-titles">Что нужно отремонтировать</span>
+          <select class="hero__calc-options" name="construction-type" id="construction-type">
+            <option class="hero__calc-option" value="1">Квартира</option>
+            <option class="hero__calc-option" value="3.2">Сан. Узел</option>
+            <option class="hero__calc-option" value="0.9">Дом</option>
+            <option class="hero__calc-option" value="0.5">Офис</option>
+            <option class="hero__calc-option" value="0.7">Ресторан</option>
+          </select>
+        </label>
+
+        <label class="hero__calc-select form__label">
+          <span class="hero__calc-titles">Вид ремонта</span>
+          <select class="hero__calc-options" name="repair-type" id="repair-type">
+            <option class="hero__calc-option" value="4000">Косметический</option>
+            <option class="hero__calc-option" value="5000">Капитальный</option>
+            <option class="hero__calc-option" value="6000">Евро</option>
+            <option class="hero__calc-option" value="8000">Элитный (дизайнерский)
+            </option>
+          </select>
+        </label>
+
+        <span class="hero__calc-titles">Тип объекта</span>
+        <p class="hero__calc-type">
+          <input class="visually-hidden hero__calc-type--left" id="type-new" name="hrepairtype" type="radio" value="1.1" checked>
+          <label class="form__label hero__calc-type-mark" for="type-new">Новостройка</label>
+          <input class="visually-hidden hero__calc-type--right" id="type-old" name="hrepairtype" type="radio" value="1">
+          <label class="form__label hero__calc-type-mark" for="type-old">Вторичный</label>
+        </p>
+      </div>
+
+      <p class="hero__calc-item">
+        <span class="hero__calc-titles">Дополнительные услуги</span>
+        <label class="form__label">
+          <input class="visually-hidden hero__calc-item--control" type="checkbox" name="hfloor" value="0.1" checked>
+          <span class="hero__calc-item-mark"></span>
+          Выравнивание пола
+        </label>
+        <label class="form__label">
+          <input class="visually-hidden hero__calc-item--control" type="checkbox" name="hwall" value="0.2">
+          <span class="hero__calc-item-mark"></span>
+          Выравнивание стен
+        </label>
+        <label class="form__label">
+          <input class="visually-hidden hero__calc-item--control" type="checkbox" name="helectro" value="0.3">
+          <span class="hero__calc-item-mark"></span>
+          Замена электропроводки
+        </label>
+        <label class="form__label">
+          <input class="visually-hidden hero__calc-item--control" type="checkbox" name="hwater" value="0.2">
+          <span class="hero__calc-item-mark"></span>
+          Замена системы водоснабжения
+        </label>
+        <label class="form__label">
+          <input class="visually-hidden hero__calc-item--control" type="checkbox" name="hmaterials" value="0.4">
+          <span class="hero__calc-item-mark"></span>
+          С&nbsp;нашими черновыми материалами
+        </label>
+      </p>
+
+      <p class="hero__calc-area">
+        <label class="hero__calc-titles hero__calc-area-label form__label" for="headercalc-slider">Площадь
+          квартиры</label>
+        <label class="form__label hero__calc-area-number">
+          <input class="hero__calc-area-input" name="hspace" type="number" value="60" min="1" max="200" step="1">
+          <span> м<sup>2</sup></span>
+        </label>
+        <input class="hero__calc-area-range" id="headercalc-slider" type="range" value="60" min="1" max="200" step="1">
+      </p>
+
+      <div class="hero__calc-result">
+        <span class="hero__calc-total">Скидка составит: <b class="hero__calc-total-js">478 834</b> р</span>
+        <p class="hero__calc-period">Длительность работ: от <b class="hero__calc-period-from">48</b> до <b class="hero__calc-period-to">57</b> дней</p>
+
+        <button class="hero__calc-submit button button--secondary" data-modal="cost" type="submit">Рассчитать
+          стоимость</button>
+      </div>
+    </form>
+
 
 	</main>
 
@@ -501,8 +582,8 @@
   </script>
 	<!-- Mango-->
   <script src="https://www.google.com/recaptcha/api.js?render=6LdkQqslAAAAAGfvORf8OCclMfKRQvRYaGAWdtjV"></script>
-	<script src="js/imask.js"></script>
-	<script src="js/app.js"></script>
+	<script src="js/imask.min.js"></script>
+	<script src="js/app.min.js"></script>
 </body>
 
 </html>

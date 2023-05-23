@@ -118,6 +118,10 @@
     grid-template-columns: 360px 1fr;
     margin-left: auto;
   }
+
+  &--separate {
+    display: none;
+  }
 }
 
 // Заглавие калькулятора
