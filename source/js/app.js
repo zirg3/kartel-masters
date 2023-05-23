@@ -110,7 +110,7 @@ if (calcBtn) {
 			e.preventDefault();
 			calcBody.classList.toggle('hero__calc--open');
 			calcBtn.classList.toggle('header__calc--opened');
-      calcBody.classList.toggle('hero__calc--separate');
+      if(calcBody.classList.contains('hero__calc-ext')) calcBody.classList.toggle('hero__calc--separate');
 		});
 	} else {// Если ли на странице нет секции Hero то вызываем модалку
 		calcBtn.addEventListener('click', (e) => {
