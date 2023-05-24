@@ -162,9 +162,8 @@ Text Domain: kartel
 }
 
 .price .wp-block-button {
-  min-width: 100%;
   font-family: "Roboto Cond", sans-serif;
-  padding: 12px 24px;
+  padding: 10px 10px;
   font-size: 20px;
   line-height: 16px;
   text-align: center;
@@ -207,6 +206,10 @@ Text Domain: kartel
   width: 100%;
 }
 
+.price .wp-block-button__link.wp-element-button {
+  padding: 0;
+}
+
 .price .has-fixed-layout tr {
   border-bottom: 2px solid #acacac;
 }
@@ -220,6 +223,7 @@ Text Domain: kartel
 .price .has-fixed-layout td:nth-of-type(1),
 .price .has-fixed-layout th:nth-of-type(1) {
   text-align: left;
+  width: 60%;
 }
 
 .price .has-fixed-layout td {
@@ -255,6 +259,7 @@ Text Domain: kartel
 
   .price .wp-block-button {
     min-width: fit-content;
+    padding: 12px 24px;
   }
 }
 
