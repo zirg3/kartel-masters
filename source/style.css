@@ -151,7 +151,7 @@ Text Domain: kartel
   padding-bottom: 20px;
 }
 
-.price > .wp-block-buttons {
+.price .wp-block-buttons {
   display: flex;
   flex-wrap: wrap;
   height: 100%;
@@ -234,8 +234,8 @@ Text Domain: kartel
 
 @media (min-width: 768px) {
   /* .price > .wp-block-buttons, */
-  .price > .wp-block-table,
-  .price > .wp-container-2 {
+  .price .wp-block-table,
+  .price .wp-container-2 {
     width: calc(100% - 40px);
     max-width: 750px;
     margin: 0 auto;
@@ -248,14 +248,14 @@ Text Domain: kartel
 
 @media (min-width: 1190px) {
   /* .price > .wp-block-buttons, */
-  .price > .wp-block-table,
-  .price > .wp-container-2  {
+  .price .wp-block-table,
+  .price .wp-container-2  {
     width: calc(100% - 50px);
     max-width: 1490px;
     margin: 0 auto;
   }
 
-  .price > .wp-block-buttons {
+  .price .wp-block-buttons {
     align-items: center;
     width: fit-content;
     max-width: none;
@@ -264,13 +264,13 @@ Text Domain: kartel
     margin-top: 20px;
   }
 
-  .price > .wp-block-button {
+  .price .wp-block-button {
     width: fit-content;
     padding: 15px 35px;
     margin-bottom: 0;
   }
 
-  .price > .wp-block-button:not(:last-of-type) {
+  .price .wp-block-button:not(:last-of-type) {
     margin: 0;
     margin-right: 20px;
   }
@@ -282,8 +282,8 @@ Text Domain: kartel
 
 @media (min-width: 1550px) {
   /* .price > .wp-block-buttons, */
-  .price > .wp-block-table,
-  .price > .wp-container-2 {
+  .price .wp-block-table,
+  .price .wp-container-2 {
     width: 100%;
     max-width: 1490px;
     margin: 0 auto;

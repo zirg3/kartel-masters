@@ -725,3 +725,27 @@ if(swiperPortf1 && swiperPortf2) {
     },
   });
 }
+
+//price table
+let groups = document.querySelectorAll('.price__table-group');
+if(groups) {
+  groups.forEach(group => {
+    let buttons = group.querySelectorAll('.wp-block-button');
+    let tables = group.querySelectorAll('.wp-block-table');
+    buttons.forEach((button, index) => {
+      button.addEventListener('click', (event) => {
+        if(!tables[index]) {
+          return null;
+        }
+        buttons.forEach(button => {
+          button.classList.remove('examples__link--active');
+        });
+        tables.forEach(table => {
+          table.classList.remove('examples__tab--active');
+        });
+        buttons[index].classList.add('examples__link--active');
+        tables[index].classList.add('examples__tab--active');
+      });
+    });
+  });
+}
