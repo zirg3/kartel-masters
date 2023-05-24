@@ -193,7 +193,6 @@ Text Domain: kartel
   width: 100%;
   table-layout: fixed;
   overflow-x: auto;
-  min-width: 400px;
   /* display: none; */
   border-collapse: collapse;
 }
@@ -215,16 +214,16 @@ Text Domain: kartel
 .price .has-fixed-layout td,th {
   padding: 10px;
   text-align: center;
+  font-size: 12px;
 }
 
 .price .has-fixed-layout td:nth-of-type(1),
 .price .has-fixed-layout th:nth-of-type(1) {
-  width: 70%;
   text-align: left;
 }
 
 .price .has-fixed-layout td {
-  font-size: 18px;
+  font-size: 14px;
 }
 
 .price .wp-block-button__link {
@@ -233,6 +232,19 @@ Text Domain: kartel
 }
 
 @media (min-width: 768px) {
+  .price .has-fixed-layout td,th {
+    font-size: 16px;
+  }
+
+  .price .has-fixed-layout td {
+    font-size: 18px;
+  }
+
+  .price .has-fixed-layout td:nth-of-type(1),
+  .price .has-fixed-layout th:nth-of-type(1) {
+    text-align: left;
+    width: 70%;
+  }
   /* .price > .wp-block-buttons, */
   .price .wp-block-table,
   .price .wp-container-2 {
