@@ -1,0 +1,34 @@
+.kontakty {
+  width: 100%;
+  padding-top: 30px;
+  margin-bottom: 50px;
+  @media (min-width: $min-desktop) {
+    width: 50%;
+    padding-top: 20px;
+    margin-bottom: 0;
+    padding-right: 15px;
+  }
+}
+
+.kontakty p {
+  margin: 0;
+  line-height: 22px;
+  font-size: 18px;
+}
+
+.kontakty p a{
+  color: $font-color-secondary;
+}
+
+.kontakty p strong{
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.kontakty p:first-of-type strong{
+  margin-top: 0;
+}
+
+.kontakty .wp-block-table {
+  margin: 0;
+}

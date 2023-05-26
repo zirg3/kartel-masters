@@ -1,0 +1,72 @@
+.maps {
+  width: 100%;
+  background-color: $bg-color-secondary;
+  color: $font-color-inverted;
+  padding-top: 40px;
+  @media (min-width: $min-desktop) {
+    width: 50%;
+  }
+}
+
+.maps__address-item {
+  display: none;
+}
+
+.maps__item {
+  display: none;
+}
+
+.maps__control-address {
+  padding: 20px;
+}
+
+.maps__address-list {
+  text-align: center;
+}
+
+.maps__control {
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 50px;
+  overflow: hidden;
+  background: #fff;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 14px;
+  margin-bottom: 15px;
+}
+
+.maps__control-button {
+  font-weight: 700;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  line-height: 19px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+  border: none;
+  padding: 15px;
+  border-bottom: 2px solid #C4C4C4;
+  border-right: 2px solid #C4C4C4;
+  cursor: pointer;
+  background: #fff;
+  @media (min-width: $min-tablet) {
+    font-size: 16px;
+  }
+}
+
+.maps__control-button:nth-child(2) {
+  border-right: none;
+}
+
+.maps__control-button:nth-child(3) {
+  border-bottom: none;
+}
+
+.maps__control-button:nth-child(4) {
+  border-bottom: none;
+  border-right: none;
+}

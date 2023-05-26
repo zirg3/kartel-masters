@@ -749,3 +749,41 @@ if(groups) {
     });
   });
 }
+
+// contacts-page--active contacts-page--active-btn
+//contacts switch map
+let contacts_maps = document.querySelectorAll('.maps__item')
+let contacts_address = document.querySelectorAll('.maps__address-item')
+let contacts_btn = document.querySelectorAll('.maps__control-button')
+let contacts_office = document.querySelectorAll('.contacts-page-office')
+
+if(contacts_maps && contacts_address && contacts_btn && contacts_office) {
+  function contacts_toggler() {
+    contacts_btn.forEach((btn,idx) => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault()
+        console.log(123);
+        contacts_btn.forEach(button => {
+          button.classList.remove('contacts-page--active-btn');
+        });
+        contacts_maps.forEach(map => {
+          map.classList.remove('contacts-page--active');
+        });
+        contacts_address.forEach(address => {
+          address.classList.remove('contacts-page--active');
+        });
+        contacts_office.forEach(office => {
+          office.classList.remove('contacts-page--active');
+        });
+        
+        btn.classList.add('contacts-page--active-btn');
+        contacts_maps[idx].classList.add('contacts-page--active');
+        contacts_address[idx].classList.add('contacts-page--active');
+        contacts_office[idx].classList.add('contacts-page--active');
+
+      })
+    })
+  }
+  contacts_toggler()
+}
+

@@ -192,6 +192,7 @@ export const clean = () => {
 
 const watcher = () => {
   gulp.watch('source/sass/**/*.scss', gulp.series(styles));
+  gulp.watch('source/js/**/!(*.min).js', gulp.series(minjs));
   gulp.watch('source/*.html').on('change', browser.reload);
 };
 

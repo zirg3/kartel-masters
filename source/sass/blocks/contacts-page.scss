@@ -1,0 +1,26 @@
+.contacts-page {
+  display: flex;
+  flex-direction: column;
+  @media (min-width: $min-desktop) {
+    flex-direction: row;
+  }
+}
+
+.contacts-page-heading {
+  background-color: $bg-color-additional;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-bottom: 0;
+}
+
+.contacts-page-office {
+  display: none;
+}
+
+.contacts-page--active {
+  display: block;
+}
+
+.contacts-page--active-btn {
+  background-color: $bg-color-btn-secondary;
+}
