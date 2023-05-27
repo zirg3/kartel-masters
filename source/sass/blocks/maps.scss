@@ -3,6 +3,7 @@
   background-color: $bg-color-secondary;
   color: $font-color-inverted;
   padding-top: 40px;
+
   @media (min-width: $min-desktop) {
     width: 50%;
   }
@@ -29,7 +30,7 @@
   flex-wrap: wrap;
   border-radius: 50px;
   overflow: hidden;
-  background: #fff;
+  background: #ffffff;
   width: 90%;
   margin: 0 auto;
   margin-top: 14px;
@@ -49,10 +50,11 @@
   color: #000000;
   border: none;
   padding: 15px;
-  border-bottom: 2px solid #C4C4C4;
-  border-right: 2px solid #C4C4C4;
+  border-bottom: 2px solid #c4c4c4;
+  border-right: 2px solid #c4c4c4;
   cursor: pointer;
-  background: #fff;
+  background: #ffffff;
+
   @media (min-width: $min-tablet) {
     font-size: 16px;
   }
