@@ -27,7 +27,7 @@
     box-shadow: none;
 
     @media (min-width: $min-desktop) {
-      padding-right: 0;
+      padding-right: 35px;
     }
   }
 
@@ -55,7 +55,6 @@
       inset 0 -1px 0 rgba(0, 0, 0, 0.1);
 
     @media (min-width: $min-desktop) {
-      position: static;
       width: 42px;
       height: 42px;
       margin: 0;
