@@ -91,6 +91,11 @@
 .page__content {
   position: relative;
   flex-grow: 1;
+
+  &--column {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 //Хлебные крошки
