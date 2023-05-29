@@ -780,7 +780,6 @@ if(contacts_maps && contacts_address && contacts_btn && contacts_office) {
         contacts_maps[idx].classList.add('contacts-page--active');
         contacts_address[idx].classList.add('contacts-page--active');
         contacts_office[idx].classList.add('contacts-page--active');
-
       })
     })
   }

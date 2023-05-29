@@ -114,9 +114,17 @@
 @import "blocks/contacts-page.scss";
 /* #endregion */
 
-/* Стили для страницы Дизайн Проекты*/
+/* Стили для страницы Дизайн Проекты dizajn proekt kvartir*/
 /* #region */
 @import "blocks/dizain-proekty.scss";
+@import "blocks/welcome.scss";
+@import "blocks/individual.scss";
+@import "blocks/benefits.scss";
+/* #endregion */
+
+/* Стили для секции предложений со звонком*/
+/* #region */
+@import "blocks/gift.scss";
 /* #endregion */
 
 /* Стили для страницы Акции*/

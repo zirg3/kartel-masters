@@ -1,0 +1,84 @@
+.benefits {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  @media (min-width: $min-tablet) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  @media (min-width: $min-desktop) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+.benefits .section__text {
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+  @media (min-width: $min-desktop) {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+}
+
+.benefits__line {
+  list-style: none;
+  padding: 0;
+  margin-top: 40px;
+  margin-bottom: 0;
+  display: grid;
+  gap: 20px;
+  @media (min-width: $min-tablet) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media (min-width: $min-desktop) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.benefits__item h3 {
+  margin-bottom: 10px;
+  margin-top: 0;
+  @include font_secondary($font-bold);
+  font-size: $font-size-min;
+  line-height: 16px;
+  text-transform: uppercase;
+  text-indent: 0;
+
+  @media (min-width: $min-desktop) {
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.benefits__item {
+  position: relative;
+  padding-left: 115px;
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 80px;
+    top: 0;
+    left: 0;
+  }
+  &:nth-of-type(1):before {
+      background: url(../../img/benefits/price.svg) center / cover no-repeat;
+    }
+  &:nth-of-type(2):before {
+    background: url(../../img/benefits/fact.svg) center / cover no-repeat;
+  }
+  &:nth-of-type(3):before {
+    background: url(../../img/benefits/result.svg) center / cover no-repeat;
+  }
+  &:nth-of-type(4):before {
+    background: url(../../img/benefits/unlimited.svg) center / cover no-repeat;
+  }
+  @media (min-width: $min-tablet) {
+    padding-left: 0;
+    padding-top: 90px;
+  }
+  @media (min-width: $min-desktop) {
+  }
+}

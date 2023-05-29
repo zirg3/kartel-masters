@@ -2,3 +2,14 @@
 .dizain-proekty {
   order: 12;
 }
+
+.dizain-proekty .wp-block-heading {
+  margin-bottom: 30px;
+
+  @include font_titles;
+
+  &--inherit {
+    font: inherit;
+    color: inherit;
+  }
+}
