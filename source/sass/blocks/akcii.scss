@@ -2,9 +2,10 @@
 .akcii {
   display: flex;
   flex-direction: column;
+  margin-bottom: 20px;
 }
 
-.akcii__title {
+.akcii__heading {
   margin: auto;
   margin-bottom: 20px;
   font-family: $font-secondary;
@@ -24,8 +25,15 @@
   }
 }
 
+.akcii__title {
+  padding: 10px 10px;
+
+  @include font_subtitles;
+}
+
 .akcii__text {
-  margin: 0;
+  max-width: 460px;
+  margin: 0 0 25px 0;
   font-style: normal;
   font-size: $font-size-min;
   line-height: 16px;
@@ -35,31 +43,101 @@
 .akcii__cta {
   width: 290px;
   padding: 14px 0;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
 }
 
 .akcii__item {
+  position: relative;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   width: 100%;
   height: 300px;
   padding: 25px 30px;
   margin-top: 30px;
   background: #f5f5f5;
   overflow: hidden;
-  background-repeat: no-repeat;
-  background-position: right;
-  background-size: 580px 230px;
 
-  &--welcome {
-    background-image: url("img/discount/welcome.jpeg");
+
+  &::after {
+    position: static;
+    display: block;
+    width: 280px;
+    height: 150px;
+    margin-top: 20px;
+    border: 3px solid #00659e;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    content: "";
   }
 
-  &--crisis {}
 
-  &--neighborhood {}
+  &--welcome::after {
+    background-image: url("../img/discount/welcome.jpeg");
+  }
 
-  &--gift {}
+  &--crisis::after {
+    background-image: url("../img/discount/crisis.jpeg");
+  }
 
-  &--close {}
+  &--neighborhood::after {
+    background-image: url("../img/discount/neighborhood.jpeg");
+  }
 
+  &--gift::after {
+    background-image: url("../img/discount/gift.jpeg");
+  }
+
+  &--close::after {
+    background-image: url("../img/discount/close.jpeg");
+  }
+
+
+  @media (min-width: $min-desktop) {
+    &::after {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      display: block;
+      width: 580px;
+      height: 320px;
+      margin: 0;
+      border: 10px solid #00659e;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      content: "";
+    }
+
+
+    &--welcome::after {
+      background-image: url("../img/discount/welcome.jpeg");
+    }
+
+    &--crisis::after {
+      width: 460px;
+      height: 460px;
+      border-radius: 50%;
+      background-image: url("../img/discount/crisis.jpeg");
+    }
+
+    &--neighborhood::after {
+      background-image: url("../img/discount/neighborhood.jpeg");
+    }
+
+    &--gift::after {
+      width: 460px;
+      height: 460px;
+      border-radius: 50%;
+      background-image: url("../img/discount/gift.jpeg");
+    }
+
+    &--close::after {
+      background-image: url("../img/discount/close.jpeg");
+    }
+
+  }
 }
