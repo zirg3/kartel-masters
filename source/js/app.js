@@ -610,7 +610,7 @@ if (btnSend && appealMessage && appealLead && form) {
 		}
 
 		grecaptcha.ready(() => {
-			grecaptcha.execute('6LdkQqslAAAAAGfvORf8OCclMfKRQvRYaGAWdtjV', {
+			grecaptcha.execute('6LeT_6olAAAAANyRRvJNGBfxYxY4HSqI3BUBVxiM', {
 				action: 'submit'
 			}).then((token) => {
 				data = data + "&token=" + token;
@@ -671,7 +671,7 @@ forms.forEach((elements) => {
 			}
 
 			grecaptcha.ready(() => {
-				grecaptcha.execute('6LdkQqslAAAAAGfvORf8OCclMfKRQvRYaGAWdtjV', {
+				grecaptcha.execute('6LeT_6olAAAAANyRRvJNGBfxYxY4HSqI3BUBVxiM', {
 					action: 'submit'
 				}).then((token) => {
 					data = data + "&token=" + token;
@@ -682,14 +682,14 @@ forms.forEach((elements) => {
 							message = elements.appendChild(newMessage(resp.message, resp.result));
 							if (resp.result) {
 								state = "?state=" + resp.result;
-								location = "/thank.php" + state;
+								location = "/thank/" + state;
 							}
 						}
 					).catch(
 						(error) => {
 							message = elements.appendChild(newMessage(error, false));
 							state = false;
-							location = "/thank.php?state=" + state;
+							location = "/thank/?state=" + state;
 						}
 					);
 				});
