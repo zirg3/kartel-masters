@@ -775,12 +775,11 @@ if(contacts_maps && contacts_address && contacts_btn && contacts_office) {
         contacts_office.forEach(office => {
           office.classList.remove('contacts-page--active');
         });
-        
+
         btn.classList.add('contacts-page--active-btn');
         contacts_maps[idx].classList.add('contacts-page--active');
         contacts_address[idx].classList.add('contacts-page--active');
         contacts_office[idx].classList.add('contacts-page--active');
-
       })
     })
   }

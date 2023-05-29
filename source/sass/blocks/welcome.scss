@@ -1,0 +1,121 @@
+.welcome {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  position: relative;
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../../img/bg/welcome/background_welcome_design.jpg);
+    background-repeat: no-repeat;
+    background-size: 560px;
+    background-position-x: 50%;
+    background-position-y: 110px;
+    z-index: -1;
+  }
+  @media (min-width: $min-tablet) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    &::before {
+      background-size: 700px;
+      background-position-x: calc(50% + 590px);
+      background-position-y: 0;
+    }
+  }
+  @media (min-width: $min-desktop) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    &::before {
+      content: "";
+      background-size: 960px;
+      background-position-x: calc(50% + 500px);
+      background-position-y: 0;
+    }
+  }
+}
+
+.welcome__content .button {
+  margin-top: 30px;
+  padding: 15px 40px;
+  margin-left: auto;
+  margin-right: auto;
+  @include font_secondary($font-bold);
+  @media (min-width: $min-tablet) {
+    margin: 0;
+  }
+}
+
+.welcome__advantages {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 400px;
+  @media (min-width: $min-tablet) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 658px;
+    margin-bottom: 0;
+    gap: 15px;
+    margin-top: 0;
+  }
+}
+
+.welcome__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 57px;
+  margin-bottom: 20px;
+  padding-left: 60px;
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 57px;
+    height: 57px;
+    background-color: var(--bg-color-primary);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+  &:nth-of-type(1)::before {
+    content: url('/img/welcome/design.svg');
+  }
+  &:nth-of-type(2)::before {
+    content: url('/img/welcome/nadzor.svg');
+  }
+  &:nth-of-type(3)::before {
+    content: url('/img/welcome/decor.svg');
+  }
+  &:nth-of-type(4)::before {
+    content: url('/img/welcome/develop.svg');
+  }
+  & h2 {
+    margin-top: 0;
+  }
+}
+.welcome__item p {
+  margin: 0;
+}
+
+.welcome__item .welcome__item-name {
+  margin-bottom: 10px;
+
+  @include font_secondary($font-bold);
+  font-size: $font-size-min;
+  line-height: 16px;
+  text-transform: uppercase;
+  text-indent: 0;
+
+  @media (min-width: $min-desktop) {
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
