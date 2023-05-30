@@ -3,6 +3,18 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 43px;
+
+  @media (min-width: $min-desktop) {
+    display: grid;
+    grid-template-columns: 1fr 422px;
+    grid-template-rows: 88px repeat(4, 300px);
+    gap: 30px;
+    margin-bottom: 45px;
+    font-size: 40px;
+    line-height: 48px;
+    text-align: start;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  }
 }
 
 .akcii__heading {
@@ -16,6 +28,9 @@
   text-transform: uppercase;
 
   @media (min-width: $min-desktop) {
+    grid-column: 1 / -1;
+    grid-row: 1 / 1;
+    justify-self: center;
     margin: 0;
     margin-bottom: 45px;
     font-size: 40px;
@@ -97,13 +112,18 @@
     background-image: url("../img/discount/close.jpeg");
   }
 
+  @media (min-width: $min-tablet) {
+    &::after {
+      width: 460px;
+      height: 240px;
+    }
+  }
 
   @media (min-width: $min-desktop) {
     align-items: flex-start;
     width: 100%;
-    height: 300px;
     padding: 25px 30px;
-    margin-top: 30px;
+    margin-top: 0;
 
     &::after {
       position: absolute;
@@ -118,6 +138,34 @@
       background-position: center;
       background-size: cover;
       content: "";
+    }
+
+    &--welcome {
+      grid-column: 1 / -1;
+      grid-row: 2 / 3;
+    }
+
+    &--crisis {
+      grid-column: 1 / 2;
+      grid-row: 3 / 4;
+      min-width: 870px;
+    }
+
+    &--neighborhood {
+      grid-column: 1 / 2;
+      grid-row: 4 / 5;
+      min-width: 870px;
+    }
+
+    &--gift {
+      grid-column: 2 / 3;
+      grid-row: 3 / 5;
+      justify-content: flex-start;
+    }
+
+    &--close {
+      grid-column: 1 / -1;
+      grid-row: 5 / 6;
     }
 
 
@@ -135,10 +183,17 @@
     }
 
     &--neighborhood::after {
+      top: auto;
+      right: -30px;
+      bottom: -70px;
+      width: 420px;
+      height: 420px;
+      transform: rotateZ(3deg);
       background-image: url("../img/discount/neighborhood.jpeg");
     }
 
     &--gift::after {
+      top: auto;
       right: -80px;
       bottom: -65px;
       width: 460px;
