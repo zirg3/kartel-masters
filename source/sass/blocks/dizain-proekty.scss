@@ -1,6 +1,18 @@
 //Стили для секции с текстом сео из редактора
 .dizain-proekty {
   order: 12;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  @media (min-width: $min-tablet) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  @media (min-width: $min-desktop) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 }
 
 .dizain-proekty .wp-block-heading {

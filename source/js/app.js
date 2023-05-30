@@ -786,3 +786,18 @@ if(contacts_maps && contacts_address && contacts_btn && contacts_office) {
   contacts_toggler()
 }
 
+//individual toggler more list
+let individual_content = document.querySelectorAll('.individual__content')
+if(individual_content) {
+  individual_content.forEach((i) => {
+    let btns = i.querySelectorAll('.individual__btn-full')
+    let list = i.querySelectorAll('.individual__list-disabled')
+    btns.forEach((btn,idx) => {
+      btn.addEventListener('click', () => {
+        list.forEach(item => {
+          item.classList.toggle('individual--active')
+        })
+      })
+    })
+  })
+}

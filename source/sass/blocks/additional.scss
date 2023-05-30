@@ -1,0 +1,63 @@
+.additional {
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  @media (min-width: $min-tablet) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  @media (min-width: $min-desktop) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+.additional__remark {
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-bottom: 5px;
+  color: $font-color;
+}
+
+.additional__table {
+  border-collapse: collapse;
+  margin-bottom: 40px;
+}
+
+.additional__table tr {
+  border-bottom: 1px solid $input-border-color;
+}
+
+.additional__table td {
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 22px;
+
+  @media (min-width: $min-tablet) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.additional__table td,
+.additional__table th {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+
+  @media (min-width: $min-tablet) {
+    padding: 15px;
+  }
+}
+
+.additional__table td:nth-of-type(2) {
+  width: 20%;
+  text-align: center;
+}
+
+.additional__table th:nth-of-type(1) {
+  text-align: left;
+}
