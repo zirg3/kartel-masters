@@ -73,19 +73,19 @@
   }
 
   &:nth-of-type(1)::before {
-    background: url("../../img/benefits/price.svg") center / cover no-repeat;
+    background: url("../img/benefits/price.svg") center / cover no-repeat;
   }
 
   &:nth-of-type(2)::before {
-    background: url("../../img/benefits/fact.svg") center / cover no-repeat;
+    background: url("../img/benefits/fact.svg") center / cover no-repeat;
   }
 
   &:nth-of-type(3)::before {
-    background: url("../../img/benefits/result.svg") center / cover no-repeat;
+    background: url("../img/benefits/result.svg") center / cover no-repeat;
   }
 
   &:nth-of-type(4)::before {
-    background: url("../../img/benefits/unlimited.svg") center / cover no-repeat;
+    background: url("../img/benefits/unlimited.svg") center / cover no-repeat;
   }
 
   @media (min-width: $min-tablet) {
