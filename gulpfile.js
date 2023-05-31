@@ -28,7 +28,7 @@ import { deleteAsync } from 'del';
 const server = (done) => {
   browser.init({
     server: {
-      baseDir: 'source'
+      baseDir: 'build'
     },
     cors: true,
     notify: false,
@@ -191,9 +191,8 @@ export const clean = () => {
 // Watcher styles with reload browser
 
 const watcher = () => {
-  gulp.watch('source/sass/**/*.scss', gulp.series(styles)).on('change',  browser.reload);
-  gulp.watch('source/js/**/!(*.min).js', gulp.series(minjs));
-  gulp.watch('source/*.html').on('change', browser.reload);
+  gulp.watch('source/sass/**/*.scss', gulp.series(styles));
+  gulp.watch('build/*.html').on('change', browser.reload);
 };
 
 
@@ -247,6 +246,6 @@ export default gulp.series(
     // createWebp
   ),
   gulp.series(
-    server,
-    watcher
+    server
+    // watcher
   ));
