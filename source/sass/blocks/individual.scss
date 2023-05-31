@@ -1,6 +1,7 @@
 .individual {
   padding-top: 40px;
   padding-bottom: 40px;
+  position: relative;
 
   @media (min-width: $min-tablet) {
     padding-top: 50px;
@@ -10,6 +11,46 @@
   @media (min-width: $min-desktop) {
     padding-top: 60px;
     padding-bottom: 60px;
+  }
+}
+
+.individual__price-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 180px;
+  margin: 0 auto;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+  color: $font-color-secondary;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: .2s ease all;
+  text-decoration: none;
+
+  @media (min-width: $min-desktop) {
+    display: block;
+    width: auto;
+    position: absolute;
+    z-index: 5;
+    right: 30px;
+    top: 140px;
+
+    & b {
+      margin-top: 5px;
+      position: absolute;
+      bottom: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+      white-space: nowrap;
+    }
+  }
+
+  &:hover {
+    opacity: 0.8;
   }
 }
 
