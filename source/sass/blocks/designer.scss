@@ -13,6 +13,24 @@
     padding-bottom: 60px;
   }
 
+  &::after {
+    @media (min-width: 1520px) {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("/img/palette.png");
+      background-size: 564px;
+      background-position-x: calc(50% + 900px);
+      background-position-y: 80px;
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
+  }
+
   &::before {
     content: "";
     display: block;
