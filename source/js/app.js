@@ -215,8 +215,35 @@ if (document.querySelector("#callback") !== null) {
       }
     });
   }
-
 }
+
+if (document.querySelector("#discount") !== null) {
+  let modalDiscount = document.querySelector("#discount");
+  let modalDiscountButton = document.querySelectorAll("[data-modal=discount]");
+  let modalDiscountClose = modalDiscount.querySelector(".modal__close");
+
+  if (modalDiscount && modalDiscountButton && modalDiscountClose) {
+    modalDiscountButton.forEach(
+      (item) => {
+        item.addEventListener('click', (e) => {
+          e.preventDefault();
+
+          if (!modalDiscount.classList.contains("modal--open")) {
+            modalDiscount.classList.add("modal--open");
+          }
+        });
+      });
+
+    modalDiscountClose.addEventListener('click', (e) => {
+      e.preventDefault();
+
+      if (modalDiscount.classList.contains("modal--open")) {
+        modalDiscount.classList.remove("modal--open");
+      }
+    });
+  }
+}
+
 
 /*
 //Примеры работ и дизайнов
