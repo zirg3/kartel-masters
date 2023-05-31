@@ -74,135 +74,148 @@ burger.addEventListener('click', (e) => {
 
 
 // Модальные окна
-let modalCalc = document.querySelector("#calculator");
-let modalCalcButton = document.querySelector("[data-modal=calculator]");
-let modalCalcClose = modalCalc.querySelector(".modal__close");
+if (document.querySelector("#calculator") !== null) {
+  let modalCalc = document.querySelector("#calculator");
+  let modalCalcButton = document.querySelector("[data-modal=calculator]");
+  let modalCalcClose = modalCalc.querySelector(".modal__close");
 
-if (modalCalcButton) {
-  modalCalcButton.addEventListener('click', (e) => {
-    e.preventDefault();
-
-    if (!modalCalc.classList.contains("modal--open")) {
-      modalCalc.classList.add("modal--open");
-    }
-  });
-
-
-}
-
-
-modalCalcClose.addEventListener('click', (e) => {
-  e.preventDefault();
-
-  if (modalCalc.classList.contains("modal--open")) {
-    modalCalc.classList.remove("modal--open");
-  }
-});
-
-// Мобильная версия калькулятора
-let calcBtn = document.querySelector(".header__calc"),
-  calcBody = document.querySelector(".hero__calc");
-
-if (calcBtn) {
-
-  if (calcBody) { // Проверяем есть ли на странице секция Hero то вызываем калькулятор
-    calcBtn.addEventListener('click', (e) => {
+  if (modalCalcButton) {
+    modalCalcButton.addEventListener('click', (e) => {
       e.preventDefault();
-      calcBody.classList.toggle('hero__calc--open');
-      calcBtn.classList.toggle('header__calc--opened');
-      if (calcBody.classList.contains('hero__calc-ext')) calcBody.classList.toggle('hero__calc--separate');
-    });
-  } else { // Если ли на странице нет секции Hero то вызываем модалку
-    calcBtn.addEventListener('click', (e) => {
-      e.preventDefault();
+
       if (!modalCalc.classList.contains("modal--open")) {
         modalCalc.classList.add("modal--open");
       }
     });
   }
 
-}
-let calcBtnPrice = document.querySelector(".price__link-calk")
-if (calcBtnPrice) {
-  calcBtnPrice.addEventListener('click', (e) => {
+
+  modalCalcClose.addEventListener('click', (e) => {
     e.preventDefault();
-    if (!modalCalc.classList.contains("modal--open")) {
-      modalCalc.classList.add("modal--open");
+
+    if (modalCalc.classList.contains("modal--open")) {
+      modalCalc.classList.remove("modal--open");
     }
   });
+
 }
 
-let modalCost = document.querySelector("#cost");
-let modalCostButtons = document.querySelectorAll("[data-modal=cost]");
-let modalCostClose = modalCost.querySelector(".modal__close");
+// Мобильная версия калькулятора
+if ((document.querySelector(".header__calc") !== null)) {
+  let calcBtn = document.querySelector(".header__calc"),
+    calcBody = document.querySelector(".hero__calc");
 
-if (modalCost && modalCostButtons && modalCostClose) {
-  modalCostButtons.forEach((modalCostButton) => {
-    modalCostButton.addEventListener('click', (e) => {
+  if (calcBtn) {
+
+    if (calcBody) { // Проверяем есть ли на странице секция Hero то вызываем калькулятор
+      calcBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        calcBody.classList.toggle('hero__calc--open');
+        calcBtn.classList.toggle('header__calc--opened');
+        if (calcBody.classList.contains('hero__calc-ext')) calcBody.classList.toggle('hero__calc--separate');
+      });
+    } else { // Если ли на странице нет секции Hero то вызываем модалку
+      calcBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        if (!modalCalc.classList.contains("modal--open")) {
+          modalCalc.classList.add("modal--open");
+        }
+      });
+    }
+
+  }
+
+  let calcBtnPrice = document.querySelector(".price__link-calk")
+  if (calcBtnPrice) {
+    calcBtnPrice.addEventListener('click', (e) => {
       e.preventDefault();
-      if (!modalCost.classList.contains("modal--open")) {
-        modalCost.classList.add("modal--open");
+      if (!modalCalc.classList.contains("modal--open")) {
+        modalCalc.classList.add("modal--open");
       }
     });
-  });
-
-  modalCostClose.addEventListener('click', (e) => {
-    e.preventDefault();
-
-    if (modalCost.classList.contains("modal--open")) {
-      modalCost.classList.remove("modal--open");
-    }
-  });
+  }
 }
 
-let modalContract = document.querySelector("#contract");
-let modalContractButton = document.querySelectorAll("[data-modal=kontrakt]");
-let modalContractClose = modalContract.querySelector(".modal__close");
+if (document.querySelector("#cost") !== null) {
+  let modalCost = document.querySelector("#cost");
+  let modalCostButtons = document.querySelectorAll("[data-modal=cost]");
+  let modalCostClose = modalCost.querySelector(".modal__close");
 
-if (modalContract && modalContractButton && modalContractClose) {
-  modalContractButton.forEach(
-    (item) => {
-      item.addEventListener('click', (e) => {
+  if (modalCost && modalCostButtons && modalCostClose) {
+    modalCostButtons.forEach((modalCostButton) => {
+      modalCostButton.addEventListener('click', (e) => {
         e.preventDefault();
-
-        if (!modalContract.classList.contains("modal--open")) {
-          modalContract.classList.add("modal--open");
+        if (!modalCost.classList.contains("modal--open")) {
+          modalCost.classList.add("modal--open");
         }
       });
     });
 
-  modalContractClose.addEventListener('click', (e) => {
-    e.preventDefault();
+    modalCostClose.addEventListener('click', (e) => {
+      e.preventDefault();
 
-    if (modalContract.classList.contains("modal--open")) {
-      modalContract.classList.remove("modal--open");
-    }
-  });
+      if (modalCost.classList.contains("modal--open")) {
+        modalCost.classList.remove("modal--open");
+      }
+    });
+  }
+
 }
 
-let modalCallback = document.querySelector("#callback");
-let modalCallbackButton = document.querySelectorAll("[data-modal=callback]");
-let modalCallbackClose = modalCallback.querySelector(".modal__close");
+if (document.querySelector("#contract") !== null) {
+  let modalContract = document.querySelector("#contract");
+  let modalContractButton = document.querySelectorAll("[data-modal=kontrakt]");
+  let modalContractClose = modalContract.querySelector(".modal__close");
 
-if (modalCallback && modalCallbackButton && modalCallbackClose) {
-  modalCallbackButton.forEach(
-    (item) => {
-      item.addEventListener('click', (e) => {
-        e.preventDefault();
+  if (modalContract && modalContractButton && modalContractClose) {
+    modalContractButton.forEach(
+      (item) => {
+        item.addEventListener('click', (e) => {
+          e.preventDefault();
 
-        if (!modalCallback.classList.contains("modal--open")) {
-          modalCallback.classList.add("modal--open");
-        }
+          if (!modalContract.classList.contains("modal--open")) {
+            modalContract.classList.add("modal--open");
+          }
+        });
       });
+
+    modalContractClose.addEventListener('click', (e) => {
+      e.preventDefault();
+
+      if (modalContract.classList.contains("modal--open")) {
+        modalContract.classList.remove("modal--open");
+      }
     });
+  }
 
-  modalCallbackClose.addEventListener('click', (e) => {
-    e.preventDefault();
+}
 
-    if (modalCallback.classList.contains("modal--open")) {
-      modalCallback.classList.remove("modal--open");
-    }
-  });
+if (document.querySelector("#callback") !== null) {
+  let modalCallback = document.querySelector("#callback");
+  let modalCallbackButton = document.querySelectorAll("[data-modal=callback]");
+  let modalCallbackClose = modalCallback.querySelector(".modal__close");
+
+  if (modalCallback && modalCallbackButton && modalCallbackClose) {
+    modalCallbackButton.forEach(
+      (item) => {
+        item.addEventListener('click', (e) => {
+          e.preventDefault();
+
+          if (!modalCallback.classList.contains("modal--open")) {
+            modalCallback.classList.add("modal--open");
+          }
+        });
+      });
+
+    modalCallbackClose.addEventListener('click', (e) => {
+      e.preventDefault();
+
+      if (modalCallback.classList.contains("modal--open")) {
+        modalCallback.classList.remove("modal--open");
+      }
+    });
+  }
+
 }
 
 /*
