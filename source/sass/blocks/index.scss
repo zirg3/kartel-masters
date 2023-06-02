@@ -20,3 +20,21 @@
     background-position-y: -60px;
   }
 }
+
+// Фоновое изображение для первой секции на странице Ремонт офисов
+.index__wrapper-ofisov {
+  min-height: 768px;
+  background-image: url("../img/bg/hero-ofisov/fullscreen-mobile.webp");
+  // background-image: linear-gradient(to right, rgba(231, 227, 227, 0.7), rgba(163, 151, 151, 0.81));
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: calc(50% + 0px);
+  background-position-y: -41px;
+
+
+  @media (min-width: $min-tablet) {
+    background-image: url("../img/bg/hero-ofisov/fullscreen-desktop.webp");
+    background-size: 1962px;
+    background-position-y: -60px;
+  }
+}
