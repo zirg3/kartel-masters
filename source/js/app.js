@@ -847,3 +847,33 @@ if (individual_content) {
     })
   })
 }
+
+//snabzhenie-otdelochnymi-materialami toggl list
+let supplyList = document.querySelectorAll('.supply__list')
+
+if(supplyList) {
+  supplyList.forEach((listI) => {
+    let list = listI.querySelectorAll('.supply__materials')
+    let btns = listI.querySelectorAll('.supply__item-btn')
+    btns.forEach((btn, idx) => {
+      btn.addEventListener('click', () => {
+        if(btns[idx].classList.contains('supply__item-btn-active')) {
+          btns[idx].classList.remove('supply__item-btn-active')
+          list[idx].classList.remove('supply__materials-active')
+        } else {
+          btns.forEach(btn => {
+            btn.classList.remove('supply__item-btn-active')
+          })
+          list.forEach(list => {
+            list.classList.remove('supply__materials-active')
+          })
+          btns[idx].classList.add('supply__item-btn-active')
+          list[idx].classList.add('supply__materials-active')
+        }
+      })
+    })
+  })
+}
+
+
+

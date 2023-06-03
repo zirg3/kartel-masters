@@ -1,0 +1,160 @@
+.recomaterials {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: $bg-color-additional;
+  position: relative;
+
+  @media (min-width: $min-tablet) {
+    &::before {
+      position: absolute;
+      display: block;
+      content: "";
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: 1;
+      width: 300px;
+      height: 300px;
+      right: 0;
+      top: 380px;
+      background-image: url(../img/angle.png);
+    }
+
+    &::after {
+      position: absolute;
+      display: block;
+      content: "";
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: 1;
+      width: 300px;
+      left: 0;
+      top: 1000px;
+      height: 520px;
+      background-image: url(../img/level_l.png);
+    }
+  }
+
+  @media (min-width: $min-tablet) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  @media (min-width: $min-desktop) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  & > .section__subtitle {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  & > .section__text {
+    max-width: 1010px;
+    margin-bottom: 60px;
+  }
+}
+
+.recomaterials__except {
+  text-align: center;
+  display: block;
+}
+
+.recomaterials__cont {
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+  flex-wrap: wrap;
+}
+
+.recomaterials__items {
+  position: relative;
+  z-index: 5;
+
+  ul {
+    padding-left: 0;
+    list-style: none;
+  }
+}
+
+.recomaterials__title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  text-transform: uppercase;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.recomaterials__text {
+
+}
+
+.recomaterials__item {
+  width: 100%;
+  max-width: 392px;
+  background: $bg-color-primary;
+  margin-bottom: 30px;
+  margin-left: 14px;
+  margin-right: 14px;
+
+  @media (min-width: $min-tablet) {
+    min-width: 392px;
+  }
+
+  & img {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.recomaterials__item ul {
+  padding: 0 15px 15px 15px;
+}
+.recomaterials__item-info li {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  color: $font-color-footer;
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 33px;
+
+  &::before {
+    display: block;
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -1px;
+    height: 16px;
+    width: 16px;
+    border-radius: 50px;
+    background-position: center center;
+    background-size: 8px;
+    background-repeat: no-repeat;
+  }
+
+  &.recomaterials__item-info--plus::before {
+    background-color: $bg-color-secondary;
+    background-image: url(../img/check+.svg);
+  }
+
+  &.recomaterials__item-info--minus::before {
+    background-color: $accordion-underline;
+    background-image: url(../img/check-.svg);
+  }
+}
+
+.recomaterials__item-info .recomaterials__item-info--minus {
+  margin-top: 15px;
+  font-weight: 400;
+}
+
+.recomaterials__item-info .recomaterials__item-info--plus {
+  font-weight: 400;
+}
