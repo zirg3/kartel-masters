@@ -1,0 +1,247 @@
+.supply {
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  @media (min-width: $min-tablet) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  @media (min-width: $min-desktop) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  & > .section__text {
+    margin-bottom: 20px;
+    max-width: 1006px;
+    margin-left: auto;
+    margin-right: auto;
+    text-indent: 0;
+    line-height: 20px;
+    font-size: 14px;
+  }
+
+  & ul {
+    list-style: none;
+  };
+}
+
+.supply__list {
+  position: relative;
+  width: 100%;
+  z-index: 3;
+  padding: 60px 0;
+}
+
+.supply__item {
+  display: inline-block;
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  padding: 20px;
+  background: $bg-color-additional;
+  margin-bottom: 10px;
+
+  @media (min-width: $min-tablet) {
+    padding: 30px;
+  }
+}
+
+
+.supply__item-btn {
+  position: relative;
+  text-align: left;
+  text-transform: uppercase;
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+  width: 100%;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  padding-left: 25px;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -15px;
+    transform: translateY(-50%) rotate(0deg);
+    display: block;
+    background-color: $bg-color-modal;
+    background-image: url("../img/icon_arrow_black_down.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    border-radius: 50%;
+    background-size: 15px;
+    transition: 0.6s;
+  }
+}
+
+.supply__item-btn-active {
+  &::after {
+    transition: 0.6s;
+    transform: translateY(-50%) rotate(180deg);
+  }
+}
+
+.supply__materials {
+  margin-top: 20px;
+  padding-left: 0;
+  display: none;
+}
+
+.supply__materials-active {
+  display: block;
+}
+
+.supply__material {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  padding: 15px;
+  background-color: $bg-color-primary;
+
+  @media (min-width: $min-tablet) {
+    flex-direction: row;
+    padding: 25px;
+  }
+}
+
+.supply__material-left {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (min-width: $min-tablet) {
+    padding-right: 15px;
+  }
+
+  & b {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    min-width: 114px;
+    padding-right: 6px;
+  }
+
+  & p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+  }
+
+  & span {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+  }
+}
+
+.supply__material-right {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  @media (min-width: $min-tablet) {
+    min-width: 300px;
+    max-width: 300px;
+    margin-top: 0;
+  }
+
+  @media (min-width: $min-desktop) {
+    min-width: 438px;
+    max-width: 438px;
+  }
+
+  & a {
+    margin: 5px;
+  }
+
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+
+
+  &--4 {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr;
+
+    & a {
+      height: 100%;
+    }
+
+    @media (min-width: $min-tablet) {
+      height: 100%;
+      & a {
+        width: 100%;
+        max-height: 210px;
+        height: 150px;
+      }
+    }
+
+    @media (min-width: $min-desktop) {
+      & a {
+        height: 210px;
+      }
+    }
+  }
+}
+
+.supply__info-wrap {
+  display: flex;
+}
+
+.supply__info {
+  width: 100%;
+}
+
+.supply__material-title {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  text-decoration: underline;
+}
+
+.supply__text,
+.supply__info-schema,
+.supply__info-discount {
+  margin-top: 20px;
+}
+
+.supply__info-schema {
+  @media (min-width: $min-tablet) {
+    width: 70%;
+    padding-right: 30px;
+  }
+
+  @media (min-width: $min-desktop) {
+    width: 80%;
+    padding-right: 30px;
+  }
+}
+
+.supply__info-discount {
+  font-weight: 700;
+  color: $font-color-secondary;
+
+  @media (min-width: $min-tablet) {
+    width: 30%;
+    padding-right: 30px;
+  }
+
+  @media (min-width: $min-desktop) {
+    width: 20%;
+    padding-right: 30px;
+  }
+}

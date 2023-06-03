@@ -1,0 +1,116 @@
+.contact-form {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin-top: 40px;
+  margin-bottom: 80px;
+  position: relative;
+
+  @media (min-width: $min-tablet) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  @media (min-width: $min-desktop) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 1160px;
+    height: 202px;
+    background-image: url("../img/bg/background_cta.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+
+  @media (min-width: $min-tablet) {
+    &::before {
+      top: 20px;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    &::before {
+      width: 960px;
+      height: 167px;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    &::before {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  & form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+
+    & input {
+      width: 100%;
+      padding: 10px;
+      margin: 0;
+      margin-bottom: 20px;
+    }
+
+    & button {
+      padding: 10px;
+      font-weight: 700;
+    }
+
+    @media (min-width: $min-tablet) {
+      flex-direction: row;
+
+      & input {
+      width: auto;
+      padding: 10px;
+      margin-bottom: 0;
+      margin-right: 10px;
+    }
+    }
+  }
+}
+
+.contact-form__wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: $font-color-inverted;
+
+  span {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 700;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 700;
+  }
+
+  @media (min-width: $min-tablet) {
+    span {
+      font-size: 22px;
+      line-height: 24px;
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 23px;
+    }
+  }
+}
