@@ -16,7 +16,7 @@
       height: 300px;
       right: 0;
       top: 380px;
-      background-image: url(../img/angle.png);
+      background-image: url("../img/angle.png");
     }
 
     &::after {
@@ -30,7 +30,7 @@
       left: 0;
       top: 1000px;
       height: 520px;
-      background-image: url(../img/level_l.png);
+      background-image: url("../img/level_l.png");
     }
   }
 
@@ -91,7 +91,7 @@
 }
 
 .recomaterials__text {
-
+  z-index: initial;
 }
 
 .recomaterials__item {
@@ -116,6 +116,7 @@
 .recomaterials__item ul {
   padding: 0 15px 15px 15px;
 }
+
 .recomaterials__item-info li {
   font-weight: 700;
   font-size: 14px;
@@ -127,7 +128,7 @@
 
   &::before {
     display: block;
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     top: -1px;
@@ -141,12 +142,12 @@
 
   &.recomaterials__item-info--plus::before {
     background-color: $bg-color-secondary;
-    background-image: url(../img/check+.svg);
+    background-image: url("../img/check+.svg");
   }
 
   &.recomaterials__item-info--minus::before {
     background-color: $accordion-underline;
-    background-image: url(../img/check-.svg);
+    background-image: url("../img/check-.svg");
   }
 }
 

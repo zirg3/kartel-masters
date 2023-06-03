@@ -24,7 +24,7 @@
 
   & ul {
     list-style: none;
-  };
+  }
 }
 
 .supply__list {
@@ -68,18 +68,17 @@
     position: absolute;
     top: 50%;
     left: -15px;
-    transform: translateY(-50%) rotate(0deg);
     display: block;
+    width: 30px;
+    height: 30px;
+    margin: 0;
     background-color: $bg-color-modal;
     background-image: url("../img/icon_arrow_black_down.svg");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;
-    width: 30px;
-    height: 30px;
-    margin: 0;
     border-radius: 50%;
     background-size: 15px;
+    transform: translateY(-50%) rotate(0deg);
     transition: 0.6s;
   }
 }
@@ -170,8 +169,6 @@
     object-fit: cover;
   }
 
-
-
   &--4 {
     display: grid;
     gap: 10px;
@@ -183,6 +180,7 @@
 
     @media (min-width: $min-tablet) {
       height: 100%;
+
       & a {
         width: 100%;
         max-height: 210px;
