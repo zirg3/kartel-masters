@@ -1,6 +1,6 @@
 // Основные скрипты интерфейса
 const doForms = async (data) => {
-  const response = await fetch("../lib/run.php", {
+  const response = await fetch("/lib/run.php", {
     method: "POST",
     body: data,
     headers: {
