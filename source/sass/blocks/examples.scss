@@ -51,6 +51,16 @@
   margin-bottom: 35px;
 }
 
+//Сео текст из WP в конце секции
+.examples__seo {
+  order: 5;
+  margin-top: 40px;
+
+  @media (min-width: $min-tablet) {
+    margin-top: 60px;
+  }
+}
+
 // Управление переключенем вкладок
 .examples__togglers {
   display: flex;
