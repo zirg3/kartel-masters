@@ -17,14 +17,14 @@ const doForms = async (data) => {
 }
 
 function addSpace(num) {
-  let n = num.toString();
+  var n = num.toString();
   return n.replace(/(\d{1,3}(?=(?:\d\d\d)+(?!\d)))/g, "$1" + ' ');
 };
 
-let mediaWidth = document.documentElement.clientWidth;
+var mediaWidth = document.documentElement.clientWidth;
 
 const newMessage = (message, status) => {
-  let item = document.createElement('span');
+  var item = document.createElement('span');
   item.innerHTML = message;
   if (status) {
     item.classList.add("success");
@@ -37,13 +37,13 @@ const newMessage = (message, status) => {
 //Фиксация шапки
 document.querySelector('.header--fix').classList.remove("header--fix");
 
-let h = document.querySelector(".header__wrapper");
+var h = document.querySelector(".header__wrapper");
 
 function onScroll() {
   window.addEventListener("scroll", callbackFunc);
 
   function callbackFunc() {
-    let y = window.pageYOffset;
+    var y = window.pageYOffset;
     if (y > 150) {
       h.classList.add("header--fix");
     } else {
@@ -63,8 +63,8 @@ window.onload = () => {
 // Мобильная версия навигационного меню
 document.querySelector(".nav--nojs").classList.remove("nav--nojs");
 
-let burger = document.querySelector(".nav__burger");
-let menuMobile = document.querySelector(".nav__menu");
+var burger = document.querySelector(".nav__burger");
+var menuMobile = document.querySelector(".nav__menu");
 
 burger.addEventListener('click', (e) => {
   e.preventDefault();
@@ -75,9 +75,9 @@ burger.addEventListener('click', (e) => {
 
 // Модальные окна
 if (document.querySelector("#calculator") !== null) {
-  let modalCalc = document.querySelector("#calculator");
-  let modalCalcButton = document.querySelector("[data-modal=calculator]");
-  let modalCalcClose = modalCalc.querySelector(".modal__close");
+  var modalCalc = document.querySelector("#calculator");
+  var modalCalcButton = document.querySelector("[data-modal=calculator]");
+  var modalCalcClose = modalCalc.querySelector(".modal__close");
 
   if (modalCalcButton) {
     modalCalcButton.addEventListener('click', (e) => {
@@ -102,7 +102,7 @@ if (document.querySelector("#calculator") !== null) {
 
 // Мобильная версия калькулятора
 if ((document.querySelector(".header__calc") !== null)) {
-  let calcBtn = document.querySelector(".header__calc"),
+  var calcBtn = document.querySelector(".header__calc"),
     calcBody = document.querySelector(".hero__calc");
 
   if (calcBtn) {
@@ -125,7 +125,7 @@ if ((document.querySelector(".header__calc") !== null)) {
 
   }
 
-  let calcBtnPrice = document.querySelector(".price__link-calk")
+  var calcBtnPrice = document.querySelector(".price__link-calk")
   if (calcBtnPrice) {
     calcBtnPrice.addEventListener('click', (e) => {
       e.preventDefault();
@@ -137,9 +137,9 @@ if ((document.querySelector(".header__calc") !== null)) {
 }
 
 if (document.querySelector("#cost") !== null) {
-  let modalCost = document.querySelector("#cost");
-  let modalCostButtons = document.querySelectorAll("[data-modal=cost]");
-  let modalCostClose = modalCost.querySelector(".modal__close");
+  var modalCost = document.querySelector("#cost");
+  var modalCostButtons = document.querySelectorAll("[data-modal=cost]");
+  var modalCostClose = modalCost.querySelector(".modal__close");
 
   if (modalCost && modalCostButtons && modalCostClose) {
     modalCostButtons.forEach((modalCostButton) => {
@@ -163,9 +163,9 @@ if (document.querySelector("#cost") !== null) {
 }
 
 if (document.querySelector("#contract") !== null) {
-  let modalContract = document.querySelector("#contract");
-  let modalContractButton = document.querySelectorAll("[data-modal=kontrakt]");
-  let modalContractClose = modalContract.querySelector(".modal__close");
+  var modalContract = document.querySelector("#contract");
+  var modalContractButton = document.querySelectorAll("[data-modal=kontrakt]");
+  var modalContractClose = modalContract.querySelector(".modal__close");
 
   if (modalContract && modalContractButton && modalContractClose) {
     modalContractButton.forEach(
@@ -191,9 +191,9 @@ if (document.querySelector("#contract") !== null) {
 }
 
 if (document.querySelector("#callback") !== null) {
-  let modalCallback = document.querySelector("#callback");
-  let modalCallbackButton = document.querySelectorAll("[data-modal=callback]");
-  let modalCallbackClose = modalCallback.querySelector(".modal__close");
+  var modalCallback = document.querySelector("#callback");
+  var modalCallbackButton = document.querySelectorAll("[data-modal=callback]");
+  var modalCallbackClose = modalCallback.querySelector(".modal__close");
 
   if (modalCallback && modalCallbackButton && modalCallbackClose) {
     modalCallbackButton.forEach(
@@ -218,9 +218,9 @@ if (document.querySelector("#callback") !== null) {
 }
 
 if (document.querySelector("#discount") !== null) {
-  let modalDiscount = document.querySelector("#discount");
-  let modalDiscountButton = document.querySelectorAll("[data-modal=discount]");
-  let modalDiscountClose = modalDiscount.querySelector(".modal__close");
+  var modalDiscount = document.querySelector("#discount");
+  var modalDiscountButton = document.querySelectorAll("[data-modal=discount]");
+  var modalDiscountClose = modalDiscount.querySelector(".modal__close");
 
   if (modalDiscount && modalDiscountButton && modalDiscountClose) {
     modalDiscountButton.forEach(
@@ -247,11 +247,11 @@ if (document.querySelector("#discount") !== null) {
 
 /*
 //Примеры работ и дизайнов
-let tabsTogglers = document.querySelectorAll("[data-examples]");
-let tabs = document.querySelectorAll(".examples__tab");
-let tabActive = document.querySelectorAll(".examples__link--active");
-let btnMore = document.querySelector(".examples__more");
-let tabMore = document.querySelectorAll(".examples__tab--active .examples__item--hidden");
+var tabsTogglers = document.querySelectorAll("[data-examples]");
+var tabs = document.querySelectorAll(".examples__tab");
+var tabActive = document.querySelectorAll(".examples__link--active");
+var btnMore = document.querySelector(".examples__more");
+var tabMore = document.querySelectorAll(".examples__tab--active .examples__item--hidden");
 
 function examplesToggle(toggler) {
 	toggler.addEventListener('click', (event) => {
@@ -288,27 +288,27 @@ if (btnMore) {
 */
 // Калькулятор
 
-let calculatorRange = document.querySelector(".hero__calc-area-range");
+var calculatorRange = document.querySelector(".hero__calc-area-range");
 
 if (calculatorRange) {
-  let calculatorNumber = document.querySelector(".hero__calc-area-input");
-  let constructionType = document.querySelector("#construction-type");
-  let repaireType = document.querySelector("#repair-type");
-  let objectType = document.querySelectorAll("[name=hrepairtype]");
-  let additionalType = document.querySelectorAll(".hero__calc-item--control");
-  let priceFileld = document.querySelector(".hero__calc-total-js");
-  let dateFromFileld = document.querySelector(".hero__calc-period-from");
-  let dateToFileld = document.querySelector(".hero__calc-period-to");
+  var calculatorNumber = document.querySelector(".hero__calc-area-input");
+  var constructionType = document.querySelector("#construction-type");
+  var repaireType = document.querySelector("#repair-type");
+  var objectType = document.querySelectorAll("[name=hrepairtype]");
+  var additionalType = document.querySelectorAll(".hero__calc-item--control");
+  var priceFileld = document.querySelector(".hero__calc-total-js");
+  var dateFromFileld = document.querySelector(".hero__calc-period-from");
+  var dateToFileld = document.querySelector(".hero__calc-period-to");
 
-  let typeCoeff = 0; //Коэффициент вид ремонта (косметический/евро/ и тд)
-  let constructionCoeff = 0; //Коэффициент тип помещения (квартира/офис и тд)
-  let objectCoeff = 0; // Коэффициент новотройка/вторичка
-  let additionalCoeff = 0; // Коэффициент доп услуги
-  let totalCoeff = 0; // Суммарный коэффициент
-  let repairSpace = 0; // Площадь помещения
-  let totalPrice = 0; // Стоимость
-  let daysFrom = 0;
-  let daysTo = 0;
+  var typeCoeff = 0; //Коэффициент вид ремонта (косметический/евро/ и тд)
+  var constructionCoeff = 0; //Коэффициент тип помещения (квартира/офис и тд)
+  var objectCoeff = 0; // Коэффициент новотройка/вторичка
+  var additionalCoeff = 0; // Коэффициент доп услуги
+  var totalCoeff = 0; // Суммарный коэффициент
+  var repairSpace = 0; // Площадь помещения
+  var totalPrice = 0; // Стоимость
+  var daysFrom = 0;
+  var daysTo = 0;
 
   function calcUpdate() {
     typeCoeff = parseFloat(repaireType.value);
@@ -368,7 +368,7 @@ if (calculatorRange) {
     });
 
   function calculateAdditional() {
-    let coeff = 0;
+    var coeff = 0;
     additionalType.forEach(
       (item) => {
         if (item.checked) {
@@ -382,12 +382,12 @@ if (calculatorRange) {
 
 //Управление прокруткой
 // Раздел видео обзоры
-let btnPrev = document.querySelector(".videoreviews .carousel__prev");
-let btnNext = document.querySelector(".videoreviews .carousel__next");
-let videoPosts = document.querySelectorAll(".videoreviews__demo-item");
-let conutPosts = videoPosts.length;
-let startIndx = 0;
-let endIndx = document.querySelectorAll(".videoreviews .carousel__slide--desktop").length - 1;
+var btnPrev = document.querySelector(".videoreviews .carousel__prev");
+var btnNext = document.querySelector(".videoreviews .carousel__next");
+var videoPosts = document.querySelectorAll(".videoreviews__demo-item");
+var conutPosts = videoPosts.length;
+var startIndx = 0;
+var endIndx = document.querySelectorAll(".videoreviews .carousel__slide--desktop").length - 1;
 
 if (btnPrev && btnNext && videoPosts) {
 
@@ -445,12 +445,12 @@ if (btnPrev && btnNext && videoPosts) {
 
 // Раздел виды ремонта
 
-let prev = document.querySelector(".repairs__demo .carousel__prev");
-let next = document.querySelector(".repairs__demo .carousel__next");
-let repairPosts = document.querySelectorAll(".repairs__type");
-let conutRepairs = repairPosts.length;
-let startRepairs = 0;
-let endRepairs = document.querySelectorAll(".repairs__types .carousel__slide--desktop").length - 1;
+var prev = document.querySelector(".repairs__demo .carousel__prev");
+var next = document.querySelector(".repairs__demo .carousel__next");
+var repairPosts = document.querySelectorAll(".repairs__type");
+var conutRepairs = repairPosts.length;
+var startRepairs = 0;
+var endRepairs = document.querySelectorAll(".repairs__types .carousel__slide--desktop").length - 1;
 
 if (prev && next && repairPosts) {
 
@@ -506,12 +506,12 @@ if (prev && next && repairPosts) {
 
 // Раздел видео отзывы
 
-let prevTestestimonial = document.querySelector(".testimonials__video .carousel__prev");
-let nextTestestimonial = document.querySelector(".testimonials__video .carousel__next");
-let testimonialPosts = document.querySelectorAll(".testimonials__video-item");
-let conutTestestimonials = testimonialPosts.length;
-let startTestestimonials = 0;
-let endTestestimonials = document.querySelectorAll(".testimonials__video-items .carousel__slide--desktop").length - 1;
+var prevTestestimonial = document.querySelector(".testimonials__video .carousel__prev");
+var nextTestestimonial = document.querySelector(".testimonials__video .carousel__next");
+var testimonialPosts = document.querySelectorAll(".testimonials__video-item");
+var conutTestestimonials = testimonialPosts.length;
+var startTestestimonials = 0;
+var endTestestimonials = document.querySelectorAll(".testimonials__video-items .carousel__slide--desktop").length - 1;
 
 if (prevTestestimonial && nextTestestimonial && testimonialPosts) {
   nextTestestimonial.addEventListener('click', (event) => {
@@ -564,12 +564,12 @@ if (prevTestestimonial && nextTestestimonial && testimonialPosts) {
 
 // Раздел команда картеля
 
-let prevTeam = document.querySelector(".team__composition .carousel__prev");
-let nextTeam = document.querySelector(".team__composition .carousel__next");
-let teamPosts = document.querySelectorAll(".team__person");
-let conutTeam = teamPosts.length;
-let startTeam = 0;
-let endTeam = document.querySelectorAll(".team__list .carousel__slide--desktop").length - 1;
+var prevTeam = document.querySelector(".team__composition .carousel__prev");
+var nextTeam = document.querySelector(".team__composition .carousel__next");
+var teamPosts = document.querySelectorAll(".team__person");
+var conutTeam = teamPosts.length;
+var startTeam = 0;
+var endTeam = document.querySelectorAll(".team__list .carousel__slide--desktop").length - 1;
 
 if (prevTeam && nextTeam && teamPosts) {
   nextTeam.addEventListener('click', (event) => {
@@ -622,8 +622,8 @@ if (prevTeam && nextTeam && teamPosts) {
 
 //Маска телефона
 
-let phoneInputs = document.querySelectorAll(".imaskphone");
-let maskOptions = {
+var phoneInputs = document.querySelectorAll(".imaskphone");
+var maskOptions = {
   mask: '+{7}(000)000-00-00',
   lazy: false
 };
@@ -634,22 +634,22 @@ phoneInputs.forEach((phoneInput) => {
 
 // Обработка формы team__leade-feedback
 
-let form = document.querySelector(".team__leade-feedback");
-let apeealWrapper = document.querySelector(".team__leader-appeal-wrapper");
-let appealMessage = document.querySelector(".team__leader-appeal");
-let appealLead = document.querySelector("[name=dir]");
-let appealToken = document.querySelector("[name=token]");
-let message;
-let state;
+var form = document.querySelector(".team__leade-feedback");
+var apeealWrapper = document.querySelector(".team__leader-appeal-wrapper");
+var appealMessage = document.querySelector(".team__leader-appeal");
+var appealLead = document.querySelector("[name=dir]");
+var appealToken = document.querySelector("[name=token]");
+var message;
+var state;
 
-let btnSend = document.querySelector(".team__leader-appeal-submit");
+var btnSend = document.querySelector(".team__leader-appeal-submit");
 
 if (btnSend && appealMessage && appealLead && form) {
 
   btnSend.addEventListener("click", (e) => {
     e.preventDefault();
 
-    let data = "message=" + appealMessage.value + "&lead=" + appealLead.value + "&trace=" + b24Tracker.guest.getTrace();
+    var data = "message=" + appealMessage.value + "&lead=" + appealLead.value + "&trace=" + b24Tracker.guest.getTrace();
 
     if (message) {
       message.remove();
@@ -681,15 +681,15 @@ if (btnSend && appealMessage && appealLead && form) {
 }
 
 // Обработка форм с данными пользователя (имя / телефон)
-let forms = document.querySelectorAll(".form-js");
+var forms = document.querySelectorAll(".form-js");
 
 forms.forEach((elements) => {
-  let name;
-  let phone;
-  let lead;
-  let btnSubmit;
+  var name;
+  var phone;
+  var lead;
+  var btnSubmit;
 
-  for (let item of elements) {
+  for (var item of elements) {
     if (item.getAttribute("type") == "submit") {
       btnSubmit = item;
     }
@@ -710,7 +710,7 @@ forms.forEach((elements) => {
   if (btnSubmit) {
     btnSubmit.addEventListener('click', (e) => {
       e.preventDefault();
-      let data = "name=" + name.value + "&phone=" + phone.value + "&lead=" + lead.value + "&trace=" + b24Tracker.guest.getTrace();;
+      var data = "name=" + name.value + "&phone=" + phone.value + "&lead=" + lead.value + "&trace=" + b24Tracker.guest.getTrace();;
 
       if (message) {
         message.remove();
@@ -748,8 +748,8 @@ forms.forEach((elements) => {
 
 
 //Swiper portfolio
-let swiperPortf1 = document.querySelector('.swiper-1')
-let swiperPortf2 = document.querySelector('.swiper-2')
+var swiperPortf1 = document.querySelector('.swiper-1')
+var swiperPortf2 = document.querySelector('.swiper-2')
 
 if (swiperPortf1 && swiperPortf2) {
   var swiper = new Swiper(".swiper-2", {
@@ -773,11 +773,11 @@ if (swiperPortf1 && swiperPortf2) {
 }
 
 //price table
-let groups = document.querySelectorAll('.price__table-group');
+var groups = document.querySelectorAll('.price__table-group');
 if (groups) {
   groups.forEach(group => {
-    let buttons = group.querySelectorAll('.wp-block-button');
-    let tables = group.querySelectorAll('.wp-block-table');
+    var buttons = group.querySelectorAll('.wp-block-button');
+    var tables = group.querySelectorAll('.wp-block-table');
     buttons.forEach((button, index) => {
       button.addEventListener('click', (event) => {
         if (!tables[index]) {
@@ -798,10 +798,10 @@ if (groups) {
 
 // contacts-page--active contacts-page--active-btn
 //contacts switch map
-let contacts_maps = document.querySelectorAll('.maps__item')
-let contacts_address = document.querySelectorAll('.maps__address-item')
-let contacts_btn = document.querySelectorAll('.maps__control-button')
-let contacts_office = document.querySelectorAll('.contacts-page-office')
+var contacts_maps = document.querySelectorAll('.maps__item')
+var contacts_address = document.querySelectorAll('.maps__address-item')
+var contacts_btn = document.querySelectorAll('.maps__control-button')
+var contacts_office = document.querySelectorAll('.contacts-page-office')
 
 if (contacts_maps && contacts_address && contacts_btn && contacts_office) {
   function contacts_toggler() {
@@ -833,11 +833,11 @@ if (contacts_maps && contacts_address && contacts_btn && contacts_office) {
 }
 
 //individual toggler more list
-let individual_content = document.querySelectorAll('.individual__content')
+var individual_content = document.querySelectorAll('.individual__content')
 if (individual_content) {
   individual_content.forEach((i) => {
-    let btns = i.querySelectorAll('.individual__btn-full')
-    let list = i.querySelectorAll('.individual__list-disabled')
+    var btns = i.querySelectorAll('.individual__btn-full')
+    var list = i.querySelectorAll('.individual__list-disabled')
     btns.forEach((btn, idx) => {
       btn.addEventListener('click', () => {
         list.forEach(item => {
@@ -849,12 +849,12 @@ if (individual_content) {
 }
 
 //snabzhenie-otdelochnymi-materialami toggl list
-let supplyList = document.querySelectorAll('.supply__list')
+var supplyList = document.querySelectorAll('.supply__list')
 
 if(supplyList) {
   supplyList.forEach((listI) => {
-    let list = listI.querySelectorAll('.supply__materials')
-    let btns = listI.querySelectorAll('.supply__item-btn')
+    var list = listI.querySelectorAll('.supply__materials')
+    var btns = listI.querySelectorAll('.supply__item-btn')
     btns.forEach((btn, idx) => {
       btn.addEventListener('click', () => {
         if(btns[idx].classList.contains('supply__item-btn-active')) {
