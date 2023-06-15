@@ -44,12 +44,12 @@
     grid-template-columns: repeat(3, 1fr);
     margin-bottom: 0;
 
-    & > .list__item:last-of-type {
+    &>.list__item:last-of-type {
       margin-bottom: 60px;
     }
   }
 
-  & > .list__item {
+  &>.list__item {
     position: relative;
     display: flex;
     flex-wrap: wrap;
@@ -62,7 +62,7 @@
     }
   }
 
-  & > .list__item:not(:last-of-type) {
+  &>.list__item:not(:last-of-type) {
     margin-bottom: 40px;
 
     @media (min-width: $min-desktop) {
@@ -70,7 +70,7 @@
     }
   }
 
-  & > .list__item::before {
+  &>.list__item::before {
     position: absolute;
     top: 0;
     left: 0;
@@ -114,6 +114,13 @@
   @media (min-width: $min-desktop) {
     width: calc(100% - 92px);
     padding-left: 0;
+    font-size: 12px;
+    line-height: 12px;
+  }
+
+  a {
+    color: inherit;
+    font-weight: 700;
   }
 }
 
