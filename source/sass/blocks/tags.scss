@@ -3,7 +3,7 @@
   width: 100%;
 
   &:hover .tags__list {
-    width: 370px;
+    max-width: 700px;
     font-size: 16px;
     transform: scale(1.2), rotate3d(360deg);
   }
@@ -15,12 +15,13 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  width: 270px;
+  min-width: 270px;
   margin: 0 auto;
   font-size: 12px;
   padding: 10px;
 
   @media (min-width: $min-desktop) {
+    max-width: 900px;
     font-size: 6px;
     transition: font-size 1.6s ease-in-out,
       width 1.6s ease-in-out,
