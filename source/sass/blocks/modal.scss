@@ -71,17 +71,36 @@
   background-color: transparent;
   box-shadow: none;
 
+  &::before {
+    display: block;
+    width: 2px;
+    height: 20px;
+    background-color: #000000;
+    transform: rotate(45deg);
+    content: "";
+  }
+
+  &::after {
+    display: block;
+    width: 2px;
+    height: 20px;
+    background-color: #000000;
+    transform: rotate(-45deg) translate(-1px,-1px);
+    content: "";
+  }
+
   @media (min-width: $min-tablet) {
     top: 16px;
     right: 16px;
 
-    &-icon {
-      display: block;
-      width: 100%;
-      height: 100%;
-      overflow: visible;
-      fill: var(--bg-color-basic);
+    &::before {
+      background-color: #ffffff;
     }
+    &::after {
+      background-color: #ffffff;
+    }
+
+
   }
 }
 
