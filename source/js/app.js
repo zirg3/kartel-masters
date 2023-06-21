@@ -656,7 +656,7 @@ if (btnSend && appealMessage && appealLead && form) {
     }
 
     grecaptcha.ready(() => {
-      grecaptcha.execute('6LeT_6olAAAAANyRRvJNGBfxYxY4HSqI3BUBVxiM', {
+      grecaptcha.execute('6Lc9prcmAAAAAP0LeLhmqduGqJXFEkipCuYGmQYn', {
         action: 'submit'
       }).then((token) => {
         data = data + "&token=" + token;
@@ -717,7 +717,7 @@ forms.forEach((elements) => {
       }
 
       grecaptcha.ready(() => {
-        grecaptcha.execute('6LeT_6olAAAAANyRRvJNGBfxYxY4HSqI3BUBVxiM', {
+        grecaptcha.execute('6Lc9prcmAAAAAP0LeLhmqduGqJXFEkipCuYGmQYn', {
           action: 'submit'
         }).then((token) => {
           data = data + "&token=" + token;
