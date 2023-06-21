@@ -85,7 +85,7 @@
     width: 2px;
     height: 20px;
     background-color: #000000;
-    transform: rotate(-45deg) translate(-1px,-1px);
+    transform: rotate(-45deg) translate(-1px, -1px);
     content: "";
   }
 
@@ -96,11 +96,10 @@
     &::before {
       background-color: #ffffff;
     }
+
     &::after {
       background-color: #ffffff;
     }
-
-
   }
 }
 

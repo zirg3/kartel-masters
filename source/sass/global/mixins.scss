@@ -55,6 +55,15 @@
   text-transform: uppercase;
 }
 
+@mixin font_spans_titles {
+  font-family: $font-secondary;
+  font-weight: $font-bold;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 //Конец шрифтов
 
 @mixin images_adaptiv {

@@ -160,9 +160,9 @@
   text-transform: uppercase;
   background-color: #ffffff;
   border-radius: 4px;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
   overflow: hidden;
-  color: font-color;
+  color: $font-color;
   text-decoration: none;
   margin-bottom: 13px;
   cursor: pointer;
@@ -271,7 +271,6 @@ th {
     align-items: center;
     width: fit-content;
     max-width: none;
-    margin-bottom: 30px;
     margin-bottom: 20px;
     margin-top: 20px;
   }

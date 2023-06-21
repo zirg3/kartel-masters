@@ -60,6 +60,21 @@
     }
   }
 
+  & span {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: $font-color-inverted;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+
+    @media (min-width: $min-desktop) {
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+
   & table {
     border-collapse: collapse;
     border-top: 1px solid $input-border-color;
