@@ -37,6 +37,7 @@
 .other-jobs__item h3,
 .other-jobs__item span {
   order: 2;
+  margin-top: 10px;
 
   @include font_spans_titles;
 }
