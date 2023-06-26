@@ -877,7 +877,7 @@ if(supplyList) {
 
 //Плавная подгрузка данных
 const loadMore = async (data) => {
-  const response = await fetch("/wp-admin/admin-ajax.php", {
+  const response = await fetch(ajaxurl, {
     method: "POST",
     body: data,
     headers: {
