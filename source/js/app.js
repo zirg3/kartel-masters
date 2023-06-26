@@ -875,5 +875,55 @@ if(supplyList) {
   })
 }
 
+//Плавная подгрузка данных
+const loadMore = async (data) => {
+  const response = await fetch("/wp-admin/admin-ajax.php", {
+    method: "POST",
+    body: data,
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
+    },
+    credentials: "same-origin"
+  });
+  if (response.ok) {
+    const jVal = await response.json();
+    return Promise.resolve(jVal);
+  } else
+    return Promise.reject("Не удалось отправить данные.");
+}
 
+function getData(element, page) {
+  data = 'action=load_more_' + element.getAttribute('data-more') + '&paged=' + page;
+  return data;
+}
 
+let currentPage = 1;
+let btnMore = document.querySelector('[data-more]');
+let moreList = (document.querySelector(".examples__tab") !== null) ? document.querySelector('.examples__tab') : '';
+
+if (document.querySelector("[data-more]") !== null && btnMore && moreList !== '' ) {
+
+  btnMore.addEventListener('click', (e) => {
+    e.preventDefault();
+    currentPage++;
+    //console.log(btnMore.getAttribute('data-more'));
+    data = getData(btnMore,currentPage);
+    //console.log(data);
+
+    loadMore(data).then(
+      (resp) => {
+        moreList.innerHTML += resp.html;
+        //console.log(resp.max);
+        if(currentPage >= resp.max) {
+          btnMore.remove();
+        }
+      }
+    ).catch(
+      (error) => {
+        moreList.appendChild(newMessage(error, false));
+      }
+    );
+
+  })
+
+}
