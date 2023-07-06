@@ -2,7 +2,7 @@
 .accordion {
   position: relative;
 
-  &:focus-within > .accordion__toggler::after {
+  &:focus-within>.accordion__toggler::after {
     transform: rotate(180deg);
   }
 }
@@ -26,7 +26,7 @@
     content: "";
   }
 
-  &:focus ~ .accordion__item {
+  &:focus~.accordion__item {
     display: flex;
     flex-direction: column;
     height: fit-content;

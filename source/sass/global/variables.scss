@@ -35,23 +35,42 @@ $min-desktop: 1190px;
 
 //Переменные CSS
 :root {
-  --min-width: #{$min-width-mobile};                  /* Минимальный размер до которого сжимается сайт без маштабирования*/
-  --font-color-basic: #{$font-color};                 /*Основной цвет текста документа*/
-  --font-color-inv: #{$font-color-inverted};          /* Комплементарный цвет текста документа*/
-  --font-color-secondary: #{$font-color-secondary};   /* Цвет текста дополнительный  */
-  --bg-color-basic: #{$bg-color-primary};             /* Основной цвет фона документа */
-  --bg-color-secondary: #{$bg-color-secondary};       /* Основной цвет фона документа */
-  --bg-color-modal: #{$bg-color-modal};               /* Цвет фона для модального окна */
-  --font-color-additional: #{$font-color-additional}; /* Вспомогательный цвет текста некоторых секций */
-  --header-color-secondary: #{$font-color-header};    /* Вспомогательный цвет текста для расписания рабочего времени и адреса в "шапке" сайта  --header-bg-color: #{$bg-color-primary};           // Фон "шапки" */
-  --main-color-secondary: #{$font-color-header};      /* Вспомогательный цвет текста для описания примеров */
-  --main-bg-color-additional: #{$bg-color-additional};/* Дополнительный фон у некоторых разделов главного содержимого */
-  --footer-color-seconadary: #{$font-color-footer};   /* Вспомогательный цвет текста в "подвале" */
-  --footer-bg-color: #{$bg-color-additional};         /* Фон "подвала" */
-  --btn-bg-basic: #{$bg-color-btn};                   /* Фон кнопок основной */
-  --btn-bg-secondary: #{$bg-color-btn-secondary};     /* Фон кнопок дополнительный */
-  --form-text-size: #{$font-form-size};               /* Размера шрифта в формах */
-  --form-line-height: #{$font-form-lineheight};       /* Высота строки текста в формах */
-  --form-input-border: #{$input-border-color};        /* Цвет рамки для поля ввода в формах */
-  --accordion-underline-color: #{$accordion-underline};/* Цвет нижней линнии позиции аккордиона */
+  --min-width: #{$min-width-mobile};
+  /* Минимальный размер до которого сжимается сайт без маштабирования*/
+  --font-color-basic: #{$font-color};
+  /*Основной цвет текста документа*/
+  --font-color-inv: #{$font-color-inverted};
+  /* Комплементарный цвет текста документа*/
+  --font-color-secondary: #{$font-color-secondary};
+  /* Цвет текста дополнительный  */
+  --bg-color-basic: #{$bg-color-primary};
+  /* Основной цвет фона документа */
+  --bg-color-secondary: #{$bg-color-secondary};
+  /* Основной цвет фона документа */
+  --bg-color-modal: #{$bg-color-modal};
+  /* Цвет фона для модального окна */
+  --font-color-additional: #{$font-color-additional};
+  /* Вспомогательный цвет текста некоторых секций */
+  --header-color-secondary: #{$font-color-header};
+  /* Вспомогательный цвет текста для расписания рабочего времени и адреса в "шапке" сайта  --header-bg-color: #{$bg-color-primary};           // Фон "шапки" */
+  --main-color-secondary: #{$font-color-header};
+  /* Вспомогательный цвет текста для описания примеров */
+  --main-bg-color-additional: #{$bg-color-additional};
+  /* Дополнительный фон у некоторых разделов главного содержимого */
+  --footer-color-seconadary: #{$font-color-footer};
+  /* Вспомогательный цвет текста в "подвале" */
+  --footer-bg-color: #{$bg-color-additional};
+  /* Фон "подвала" */
+  --btn-bg-basic: #{$bg-color-btn};
+  /* Фон кнопок основной */
+  --btn-bg-secondary: #{$bg-color-btn-secondary};
+  /* Фон кнопок дополнительный */
+  --form-text-size: #{$font-form-size};
+  /* Размера шрифта в формах */
+  --form-line-height: #{$font-form-lineheight};
+  /* Высота строки текста в формах */
+  --form-input-border: #{$input-border-color};
+  /* Цвет рамки для поля ввода в формах */
+  --accordion-underline-color: #{$accordion-underline};
+  /* Цвет нижней линнии позиции аккордиона */
 }
