@@ -124,10 +124,10 @@
   text-indent: 0;
 
   @media (min-width: $min-desktop) {
-    width: calc(100% - 92px);
+    width: 100%;
     padding-left: 0;
-    font-size: 12px;
-    line-height: 12px;
+    font-size: 14px;
+    line-height: 14px;
   }
 
   a {
