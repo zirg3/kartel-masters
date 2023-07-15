@@ -81,7 +81,7 @@ export const combSel = () => {
 
 export const cssRebase = () => {
   return gulp.src('source/css/**/*.css')
-    .pipe(postcss([mqPacker()]))
+    //.pipe(postcss([mqPacker()]))
     .pipe(gulp.dest('source/css/output'));
 };
 

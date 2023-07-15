@@ -839,7 +839,12 @@ if (individual_content) {
     let btns = i.querySelectorAll('.individual__btn-full')
     let list = i.querySelectorAll('.individual__list-disabled')
     btns.forEach((btn, idx) => {
-      btn.addEventListener('click', () => {
+      btn.addEventListener('click', (e) => {
+        if(e.target.textContent === 'Развернуть') {
+          e.target.textContent = 'Свернуть'
+        } else {
+          e.target.textContent = 'Развернуть'
+        }
         list.forEach(item => {
           item.classList.toggle('individual--active')
         })
