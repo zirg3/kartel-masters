@@ -635,7 +635,7 @@ phoneInputs.forEach((phoneInput) => {
 // Обработка формы team__leade-feedback
 
 let form = document.querySelector(".team__leade-feedback");
-let apeealWrapper = document.querySelector(".team__leader-appeal-wrapper");
+//let apeealWrapper = document.querySelector(".team__leader-appeal-wrapper");
 let appealMessage = document.querySelector(".team__leader-appeal");
 let appealLead = document.querySelector("[name=dir]");
 let appealToken = document.querySelector("[name=token]");
@@ -664,13 +664,19 @@ if (btnSend && appealMessage && appealLead && form) {
 
         doForms(data).then(
           (resp) => {
-            apeealWrapper.remove();
-            message = form.appendChild(newMessage(resp.message, resp.result));
+            //apeealWrapper.remove();
+            //message = form.appendChild(newMessage(resp.message, resp.result));
+            if (resp.result) {
+              state = "?state=" + resp.result;
+              location = "/thank/" + state;
+            }
           }
         ).catch(
           (error) => {
-            apeealWrapper.remove();
-            message = form.appendChild(newMessage(error, false));
+            //apeealWrapper.remove();
+            //message = form.appendChild(newMessage(error, false));
+            state = false;
+            location = "/thank/?state=" + state;
           }
         );
       });
@@ -725,7 +731,7 @@ forms.forEach((elements) => {
 
           doForms(data).then(
             (resp) => {
-              message = elements.appendChild(newMessage(resp.message, resp.result));
+              //message = elements.appendChild(newMessage(resp.message, resp.result));
               if (resp.result) {
                 state = "?state=" + resp.result;
                 location = "/thank/" + state;
@@ -733,7 +739,7 @@ forms.forEach((elements) => {
             }
           ).catch(
             (error) => {
-              message = elements.appendChild(newMessage(error, false));
+              //message = elements.appendChild(newMessage(error, false));
               state = false;
               location = "/thank/?state=" + state;
             }
