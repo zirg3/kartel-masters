@@ -851,24 +851,24 @@ if (document.querySelector("[data-more]") !== null && btnMore && moreList !== ''
 let calculatorRange = document.querySelector(".hero__calc-area-range");
 
 if (calculatorRange) {
-  let calculatorNumber = document.querySelector(".hero__calc-area-input");
-  let constructionType = document.querySelector("#construction-type");
-  let repaireType = document.querySelector("#repair-type");
-  let objectType = document.querySelectorAll("[name=hrepairtype]");
-  let additionalType = document.querySelectorAll(".hero__calc-item--control");
-  let priceFileld = document.querySelector(".hero__calc-total-js");
-  let dateFromFileld = document.querySelector(".hero__calc-period-from");
-  let dateToFileld = document.querySelector(".hero__calc-period-to");
+  var calculatorNumber = document.querySelector(".hero__calc-area-input");
+  var constructionType = document.querySelector("#construction-type");
+  var repaireType = document.querySelector("#repair-type");
+  var objectType = document.querySelectorAll("[name=hrepairtype]");
+  var additionalType = document.querySelectorAll(".hero__calc-item--control");
+  var priceFileld = document.querySelector(".hero__calc-total-js");
+  var dateFromFileld = document.querySelector(".hero__calc-period-from");
+  var dateToFileld = document.querySelector(".hero__calc-period-to");
 
-  let typeCoeff = 0; //Коэффициент вид ремонта (косметический/евро/ и тд)
-  let constructionCoeff = 0; //Коэффициент тип помещения (квартира/офис и тд)
-  let objectCoeff = 0; // Коэффициент новотройка/вторичка
-  let additionalCoeff = 0; // Коэффициент доп услуги
-  let totalCoeff = 0; // Суммарный коэффициент
-  let repairSpace = 0; // Площадь помещения
-  let totalPrice = 0; // Стоимость
-  let daysFrom = 0;
-  let daysTo = 0;
+  var typeCoeff = 0; //Коэффициент вид ремонта (косметический/евро/ и тд)
+  var constructionCoeff = 0; //Коэффициент тип помещения (квартира/офис и тд)
+  var objectCoeff = 0; // Коэффициент новотройка/вторичка
+  var additionalCoeff = 0; // Коэффициент доп услуги
+  var totalCoeff = 0; // Суммарный коэффициент
+  var repairSpace = 0; // Площадь помещения
+  var totalPrice = 0; // Стоимость
+  var daysFrom = 0;
+  var daysTo = 0;
 
   function calcUpdate() {
     typeCoeff = parseFloat(repaireType.value);
@@ -928,7 +928,7 @@ if (calculatorRange) {
     });
 
   function calculateAdditional() {
-    let coeff = 0;
+    var coeff = 0;
     additionalType.forEach(
       (item) => {
         if (item.checked) {
