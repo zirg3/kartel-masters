@@ -848,7 +848,7 @@ if (document.querySelector("[data-more]") !== null && btnMore && moreList !== ''
 
 // Калькулятор (код не работает в Сафари)
 
-let calculatorRange = document.querySelector(".hero__calc-area-range");
+var calculatorRange = document.querySelector(".hero__calc-area-range");
 
 if (calculatorRange) {
   var calculatorNumber = document.querySelector(".hero__calc-area-input");
