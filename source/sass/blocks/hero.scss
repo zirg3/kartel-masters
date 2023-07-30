@@ -265,7 +265,7 @@
   }
 
   &--control:checked + .hero__calc-item-mark {
-    justify-content: end;
+    justify-content: flex-end;
     background-color: var(--btn-bg-secondary);
   }
 }
